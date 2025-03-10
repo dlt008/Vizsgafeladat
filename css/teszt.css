@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+input[type=text]{
+    background-color: white;
+    background-image: url();
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "top-left top"
+        "left main";
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: rgb(0, 0, 0); /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease, grid-template-columns 0.3s ease; /* Smooth transition */
+}
+
+body:has(.left.expanded) {
+    grid-template-columns: 200px 1fr;
+}
+
+.top-left {
+    grid-area: top-left;
+    background-color: #ffffff; /* Fully white */
+    z-index: 2;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.top {
+    grid-area: top;
+    background-color: #ffffff; /* Fully white */
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.top h1 {
+    color: #000000; /* Black text for "Teszt" */
+    margin: 0;
+    font-weight: 500; /* Slightly bolder for better visibility */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.left {
+    grid-area: left;
+    background-color: #ffffff; /* Fully white */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.left hr {
+    width: 70%;
+    height: 2px;
+    background-color: #000000;
+    border: 0px solid black;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.main {
+    grid-area: main;
+    background-color: #f0f0f0; /* Light greyish background */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    display: flex;
+    justify-content: center;
+}
+
+.left .material-symbols-outlined {
+    font-size: 35px;
+    color: #000000; /* Black icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    transition: background-color 0.5s ease, color 0.3s ease; /* Smooth transition */
+    position: relative; /* Required for tooltip positioning */
+}
+
+.left .material-symbols-outlined:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+}
+
+/* Tooltip text */
+.left .material-symbols-outlined::after {
+    content: attr(data-tooltip); /* Use data-tooltip attribute for text */
+    position: absolute;
+    left: 100%; /* Position to the right of the icon */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000000; /* Black background for tooltip */
+    color: #ffffff; /* White text for tooltip */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "Roboto", serif;
+    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0; /* Hide by default */
+    pointer-events: none; /* Prevent tooltip from blocking hover */
+    transition: opacity 0.3s ease;
+    margin-left: 5px;
+}
+
+.left .material-symbols-outlined:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .top-left,
+body.dark-mode .top,
+body.dark-mode .left {
+    background-color: #000; /* Dark grey for top and left sections */
+    box-shadow: 1px 0 5px rgb(0, 0, 0); /* Subtle white shadow */
+}
+
+body.dark-mode .top-left {
+    box-shadow: none; /* Remove box-shadow for top-left in dark mode */
+}
+
+body.dark-mode .top h1 {
+    color: white; /* White text for "Teszt" */
+}
+
+body.dark-mode .left hr {
+    background-color: white; /* White divider lines */
+}
+
+body.dark-mode .main {
+    background-color: #1a1a1a; /* Dark grey for main section */
+}
+
+body.dark-mode .material-symbols-outlined {
+    color: white; /* White icons */
+}
+
+body.dark-mode .material-symbols-outlined:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+body.dark-mode .material-symbols-outlined::after {
+    background-color: white; /* White background for tooltip */
+    color: black; /* Black text for tooltip */
+}
+
+.PostDiv {
+    width: 80%;
+    height: 94%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    grid-template-columns: 255px 840px;
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 30px;
+    background: none;
+}   
+
+.Posts {
+    grid-row: 1/6;
+    grid-column: 2/3;
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    transition: background-color 0.3s ease;
+}
+
+.leftSideDiv {
+    grid-row: 1/6;
+    grid-column: 1/2;
+    background-color: rgb(226, 226, 226);
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+body.dark-mode .leftSideDiv {
+    background-color: rgb(12, 12, 12);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.Post {
+    background-color: rgb(211, 211, 211);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .Post {
+    background-color: rgb(12, 12, 12);
+    box-shadow: 2px 2px 7px 2px rgba(255, 255, 255, 0.05);
+}
+
+.Content {
+    grid-row: 2/3;
+    margin-top: 10px;
+    margin-left: 70px; /* Align content with username */
+    text-align: justify;
+}
+
+body.dark-mode .Posts {
+    background-color: rgb(12, 12, 12);
+}
+
+.Head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+    height: 65px;
+}
+
+.postPfp {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.Head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.Head span {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: black;
+}
+
+.more-icon {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.more-icon:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.more-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.text {
+    margin: 15px 0;
+    line-height: 1.5;
+    color: black;
+    font-size: 0.95em;
+}
+
+.mentions {
+    margin: 15px 0;
+    color: black;
+    font-size: 0.9em;
+}
+
+.mentions span {
+    word-spacing: 8px;
+    color: purple
+}
+
+.Comments {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid black;
+}
+
+.comment-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.comment-area {
+    width: 100%;
+    min-height: 40px;
+    max-height: 150px;
+    padding: 10px 45px 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(197, 196, 196);
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95em;
+    line-height: 1.4;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    transition: background-color 0.2s;
+}
+
+.comment-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.comment-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.comment-area::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.dark-mode .comment-area::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.comment-area:focus {
+    background-color: rgb(200, 200, 200);
+}
+
+.comment-area::placeholder {
+    color: black;
+}
+
+.comment-controls {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.send-button {
+    all: unset;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.send-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.send-button img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Dark mode adjustments */
+.dark-mode .Post,
+.dark-mode .comment-area {
+    background-color: #333;
+    border-color: white;
+    color: white;
+}
+
+.dark-mode .Head span,
+.dark-mode .text,
+.dark-mode .mentions,
+.dark-mode .comment-area,
+.dark-mode .comment-area::placeholder {
+    color: white;
+}
+
+.dark-mode .more-icon:hover,
+.dark-mode .send-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+::placeholder {
+    color: black;
+}
+
+.input-wrapper {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.input-wrapper button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.toggle-button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 2px;
+    background-color: rgb(197, 196, 196);
+    transition: background-color 0.2s;
+}
+
+.toggle-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button span {
+    font-size: 0.9em;
+    color: black;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Dark mode adjustments */
+.dark-mode .toggle-button {
+    background-color: #333;
+}
+
+.dark-mode .toggle-button span {
+    color: white;
+}
+
+/* From Uiverse.io by deepak16375 */ 
+.input {
+    font-size: 17px;
+    color: black;
+    border: none;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+}
+  
+.button {
+    border: none;
+    text-decoration: none;
+    padding: 15px;
+    padding-bottom: 17px;
+    font-size: 17px;
+    color: black;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+    cursor: pointer;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+}
