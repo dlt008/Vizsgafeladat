@@ -25,24 +25,8 @@
         }
     </style>
     <script>
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-            
-            // Toggle icon visibility based on dark mode
-            const blackIcons = document.querySelectorAll('.icon-black');
-            const whiteIcons = document.querySelectorAll('.icon-white');
-            
-            blackIcons.forEach(icon => {
-                icon.style.display = element.classList.contains('dark-mode') ? 'none' : 'block';
-            });
-            
-            whiteIcons.forEach(icon => {
-                icon.style.display = element.classList.contains('dark-mode') ? 'block' : 'none';
-            });
-        }
 
-        // Comment area functionality
+        //Kommentelési div 
         document.querySelectorAll('.comment-area').forEach(commentArea => {
             const maxHeight = parseInt(getComputedStyle(commentArea).lineHeight) * 5;
             
