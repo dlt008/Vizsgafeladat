@@ -99,12 +99,31 @@
                     <button class="button" style="display: flex; justify-content: center; align-items: center;">
                         <img src="blackSVG/searchSVG.svg" alt="Search">
                     </button>
-                </div>
+                </div>                
 
-                <div class="Recommended" style="margin-top: 20px;">
-                    <div class="postPfp" style="background-image: url('jonkler.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                </div>
+                <hr style="all: unset; background-color: rgba(0, 0, 0, 0.05); width: calc(100% + 40px); height: 1px; margin: 20px -20px;">
+                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Who to follow</span>
 
+                <div class="Recommended" style="display: flex; align-items: center; background-color: rgb(211, 211, 211); padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
+
+                    <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
+                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
+                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
+                    </div>
+                
+                    <div class="user" style="display: flex; gap: 5px; margin-top: 20px; align-items: center; width: 100%;">
+                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
+                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Main diven belüli középső div (posztok) -->
@@ -113,7 +132,7 @@
                     <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
                     <div class="Head">
                         <!-- Felhasználói profilkép -->
-                        <div class="postPfp" style="background-image: url('jonkler.png'); width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
                         <!-- Felhasználónév -->
                         <span>@WhySoSerious</span>
                         <!-- More button ami "report"/"save" buttonokat tartalmazza -->
