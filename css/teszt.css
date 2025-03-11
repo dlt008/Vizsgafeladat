@@ -81,8 +81,19 @@ body:has(.left.expanded) {
     overflow: hidden;
 }
 
-.left hr {
-    width: 70%;
+.left-icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    gap: 20px;
+}
+
+.left-icons hr {
+    width: 50px;
+    max-width: 70%;
     height: 2px;
     background-color: #000000;
     border: 0px solid black;
@@ -99,7 +110,7 @@ body:has(.left.expanded) {
     padding: 20px 0px 20px 0px;
 }
 
-.left .material-symbols-outlined {
+.left-icons .material-symbols-outlined {
     font-size: 35px;
     display: flex;
     justify-content: center;
@@ -110,17 +121,16 @@ body:has(.left.expanded) {
     overflow: hidden;
 }
 
-.left .material-symbols-outlined:hover {
+.left-icons .material-symbols-outlined:hover {
     background-color: rgba(0, 0, 0, 0.1);
+    width: 50px;
 }
 
 /* Tooltip szöveg */
-.left .material-symbols-outlined::after {
+.left-icons .material-symbols-outlined::after {
     content: attr(data-tooltip); /* A data-tooltip attribútum felhasználása a hovernek szükséges szövegnek */
     position: absolute;
     left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
     background-color: #000000;
     color: #ffffff;
     padding: 5px 10px;
@@ -131,11 +141,11 @@ body:has(.left.expanded) {
     opacity: 0; /* A szöveg eltüntetése alapból */
     pointer-events: none; /* A tooltip letiltása a hover letiltásáról */
     transition: opacity 0.3s ease;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
-.left .material-symbols-outlined:hover::after {
-    opacity: 1; /* A tooltip szöveg feltüntetése hover esemény bekövetkezteként */
+.left-icons .material-symbols-outlined:hover::after {
+    opacity: 1;/* A tooltip szöveg feltüntetése hover esemény bekövetkezteként */
 }
 
 .PostDiv {
