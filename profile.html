@@ -42,11 +42,21 @@
         .leftInformation {
             grid-row: 3/4;
             grid-column: 1/4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 10px;
+            gap: 20px;
         }
 
         .rightInformation {
             grid-row: 3/4;
             grid-column: 6/9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 10px;
+            gap: 20px;
         }
 
     </style>
@@ -76,11 +86,22 @@
         <div class="segitseg">
             <div class="backgroundImage"></div>
             <div class="profilePicture"></div>
-            <div class="leftInformation" style="display: flex; justify-content: center; margin-top: 10px;">
-                <img src="blackSVG/lightBulbSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;">
-                <img src="blackSVG/personSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;">
+            <div class="leftInformation">
+                <div class="ideasInformation" style="display: flex; align-items: center;">
+                    <img src="blackSVG/lightBulbSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                </div>
+                <div class="followerInformation" style="display: flex; align-items: center;">
+                    <img src="blackSVG/personSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                </div>
             </div>
-            <div class="rightInformation"></div>
+            <div class="rightInformation">
+                <div class="ideasInformation" style="display: flex; align-items: center;">
+                    <img src="blackSVG/heartSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                </div>
+                <div class="followerInformation" style="display: flex; align-items: center;">
+                    <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                </div>
+            </div>
         </div>
 
 </body>
