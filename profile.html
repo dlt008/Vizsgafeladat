@@ -11,6 +11,42 @@
             element.classList.toggle("dark-mode");
         }
     </script>
+    <style>
+        .segitseg {
+            display: grid;
+            grid-template-columns: repeat(8, 100px);
+            grid-template-rows: repeat(5, 100px);
+        }
+
+        .backgroundImage {
+            z-index: 1;
+            grid-row: 1/3;
+            grid-column: 1/9;
+            background-color: black;
+        }
+
+        .profilePicture {
+            z-index: 2;
+            grid-row: 2/4;
+            grid-column: 4/6;
+            background-color: red;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            transform: translate(10%, 10%)
+        }
+
+        .leftInformation {
+            grid-row: 3/4;
+            grid-column: 1/4;
+        }
+
+        .rightInformation {
+            grid-row: 3/4;
+            grid-column: 6/9;
+        }
+
+    </style>
 </head>
 <body>
     <div class="top-left"></div>
@@ -34,19 +70,15 @@
     </div>
     <div class="main">
 
-        <div class="Header" style="margin: 30px;">
-            <div class="pfpbackground">
-                <div class="buttons" style="display: flex; flex-wrap: wrap; flex-direction: column;">
-                    <span class="material-symbols-outlined" style="padding:5px"><img src="./SVG icons/cameraSVG.svg" alt="" srcset=""></span>
-                    <span class="material-symbols-outlined" style="padding:5px"><img src="./SVG icons/addSVG.svg" alt="" srcset=""></span>
-                    <span class="material-symbols-outlined" style="padding:5px"><img src="./SVG icons/reportflagSVG.svg" alt="" srcset=""></span>
-                </div>
-                <div class="profilepicture"></div>
+        <div class="segitseg">
+            <div class="backgroundImage"></div>
+            <div class="profilePicture"></div>
+            <div class="leftInformation">
+                <img src="blackSVG/lightBulbSVG.svg" alt="" srcset="">
+                <img src="blackSVG/personSVG.svg" alt="" srcset="">
             </div>
+            <div class="rightInformation"></div>
         </div>
-    </div>
-
-    <div class="UserTeszt"></div>
 
 </body>
 </html>
