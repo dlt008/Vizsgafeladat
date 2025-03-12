@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="css/teszt.css">
-    <script>
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
-    </script>
     <style>
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .profileInformation {
+            display: grid;
+            grid-template-columns: 840px 290px;
+            background-color: rgb(226, 226, 226);
+        }
+
         .segitseg {
             display: grid;
             grid-template-columns: repeat(8, 100px);
             grid-template-rows: repeat(5, 100px);
+            grid-column: 1/2;
+            padding: 20px;
+        }
+
+        .userFeed {
+            display: grid;
+            grid-column: 2/3;
+            padding: 20px;
         }
 
         .backgroundImage {
@@ -33,7 +48,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border: 5px solid #f0f0f0;;
+            border: 6px solid rgb(226, 226, 226);
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -57,6 +72,7 @@
             align-items: flex-start;
             margin-top: 10px;
             gap: 20px;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
         }
 
     </style>
@@ -83,26 +99,38 @@
     </div>
     <div class="main">
 
-        <div class="segitseg">
-            <div class="backgroundImage"></div>
-            <div class="profilePicture"></div>
-            <div class="leftInformation">
-                <div class="ideasInformation" style="display: flex; align-items: center;">
-                    <img src="blackSVG/lightBulbSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
-                </div>
-                <div class="followerInformation" style="display: flex; align-items: center;">
-                    <img src="blackSVG/personSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
-                </div>
-            </div>
-            <div class="rightInformation">
-                <div class="ideasInformation" style="display: flex; align-items: center;">
-                    <img src="blackSVG/heartSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
-                </div>
-                <div class="followerInformation" style="display: flex; align-items: center;">
-                    <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
-                </div>
-            </div>
-        </div>
+        <div class="profileInformation">
 
+            <div class="segitseg">
+                <div class="backgroundImage"></div>
+                <div class="profilePicture"></div>
+                <div class="leftInformation">
+                    <div class="ideasInformation" style="display: flex; align-items: center;">
+                        <img src="blackSVG/lightBulbSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                    </div>
+                    <div class="followerInformation" style="display: flex; align-items: center;">
+                        <img src="blackSVG/personSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                    </div>
+                </div>
+                <div class="rightInformation">
+                    <div class="ideasInformation" style="display: flex; align-items: center;">
+                        <img src="blackSVG/heartSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                    </div>
+                    <div class="followerInformation" style="display: flex; align-items: center;">
+                        <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="userFeed">
+                
+                <div class="searchBar">
+                    <input placeholder="Search..." class="input" name="text" type="text">
+                    <button class="button" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="blackSVG/searchSVG.svg" alt="Search">
+                    </button>
+                </div>
+
+        </div>
 </body>
 </html>

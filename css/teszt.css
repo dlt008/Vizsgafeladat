@@ -600,7 +600,6 @@ body:has(.left.expanded) {
     height: 35px;
     width: 100%; /* Ensure it takes the full width of its container */
     box-sizing: border-box; /* Include padding and border in the element's total width */
-
 }
 
 .input {
