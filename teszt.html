@@ -1,270 +1,443 @@
-    <!DOCTYPE html>
-    <html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Main</title>
-        <link rel="stylesheet" href="css/teszt.css">
-        <style>
-            .Comments {
-                display: none;
-            }
-            .Comments.expanded {
-                display: block;
-            }
-            .comments-toggle {
-                all: unset;
-                margin-top: 10px;
-                padding: 5px 10px;
-                cursor: pointer;
-                font-size: 14px;
-                color: #666;
-            }
-            .dark-mode .comments-toggle {
-                color: #aaa;
-            }
-        </style>
-        <script src="js/toggleComments.js"></script>
-        <script src="js/responsive.js"></script>
-    </head>
-    <body>
-        <div class="top-left"></div>
-        <div class="top">
-            <h1>EchoMap</h1>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/teszt.css">
+    <style>
+        .Comments {
+            display: none;
+        }
+        .Comments.expanded {
+            display: block;
+        }
+        .comments-toggle {
+            all: unset;
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+    <script src="js/toggleComments.js"></script>
+    <script src="js/responsive.js"></script>
+</head>
+<body>
+    <div class="top-left"></div>
+    <div class="top">
+        <h1>EchoMap</h1>
+    </div>
+    <div class="left">
+        <div class="left-icons">
+            <!-- Baloldali navigációs menü buttonok/ikonok -->
+            <span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span>
+            <hr>
+            <span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="News icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Chat icon" srcset=""></span>
+            <hr>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="blackSVG/darkmodeSVG.svg" alt="Dark mode icon" srcset=""></span>
+            <hr>
+            <span class="material-symbols-outlined" data-tooltip="Settings"><img src="blackSVG/tuneSVG.svg" alt="Settings icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Logout"><img src="blackSVG/logoutSVG.svg" alt="Logout icon" srcset=""></span>
         </div>
-        <div class="left">
-            <div class="left-icons">
-                <!-- Baloldali navigációs menü buttonok/ikonok -->
-                <span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span>
-                <span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span>
-                <hr>
-                <span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="News icon" srcset=""></span>
-                <span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Chat icon" srcset=""></span>
-                <hr>
-                <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="blackSVG/darkmodeSVG.svg" alt="Dark mode icon" srcset=""></span>
-                <hr>
-                <span class="material-symbols-outlined" data-tooltip="Settings"><img src="blackSVG/tuneSVG.svg" alt="Settings icon" srcset=""></span>
-                <span class="material-symbols-outlined" data-tooltip="Logout"><img src="blackSVG/logoutSVG.svg" alt="Logout icon" srcset=""></span>
-            </div>
-        </div>
-        <div class="main">
-            <div class="PostDiv">
+    </div>
+    <div class="main">
+        <div class="PostDiv">
 
-                <!-- Main diven belül bal oldali div (search bar/who to follow lista) -->
-                <div class="leftSideDiv">
+            <!-- Main diven belül bal oldali div (search bar/who to follow lista) -->
+            <div class="leftSideDiv">
 
-                    <div class="searchBar">
-                        <input placeholder="Search..." class="input" name="text" type="text">
-                        <button class="button" style="display: flex; justify-content: center; align-items: center;">
-                            <img src="blackSVG/searchSVG.svg" alt="Search">
-                        </button>
-                    </div>                
+                <div class="searchBar">
+                    <input placeholder="Search..." class="input" name="text" type="text">
+                    <button class="button" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="blackSVG/searchSVG.svg" alt="Search">
+                    </button>
+                </div>                
 
-                    <hr style="all: unset; background-color: rgba(0, 0, 0, 0.05); width: calc(100% + 40px); height: 1px; margin: 20px -20px;">
-                    <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Who to follow</span>
+                <hr style="all: unset; background-color: rgba(0, 0, 0, 0.05); width: calc(100% + 40px); height: 1px; margin: 20px -20px;">
+                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Who to follow</span>
 
-                    <div class="Recommended" style="display: flex; align-items: center; background-color: rgb(211, 211, 211); padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
+                <div class="Recommended" style="display: flex; align-items: center; background-color: rgb(211, 211, 211); padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
 
-                        <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
-                            <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
-                            <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
-                                <p>@Username</p>
-                                <span style="font-size: 15px;">Username</span>
-                            </div>
-                            <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
+                    <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
+                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
+                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
                         </div>
-                    
-                        <div class="user" style="display: flex; gap: 5px; margin-top: 20px; align-items: center; width: 100%;">
-                            <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
-                            <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
-                                <p>@Username</p>
-                                <span style="font-size: 15px;">Username</span>
-                            </div>
-                            <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
-                        </div>
+                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
                     </div>
-
-                    <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px; text-align: center; margin-top: 20px;">Recent posts by followed users</span>
-
-                    <div class="recentPosts" style="display: flex; align-items: center; background-color: rgb(211, 211, 211); padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
-                        <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
-                            <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
-                            <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
-                                <p>@Username</p>
-                                <span style="font-size: 15px;">Username</span>
-                            </div>
-                            <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">View</button>
+                
+                    <div class="user" style="display: flex; gap: 5px; margin-top: 20px; align-items: center; width: 100%;">
+                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
+                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
                         </div>
+                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
                     </div>
-
                 </div>
 
-                <!-- Main diven belüli középső div (posztok) -->
-                <div class="Posts">
-                    <div class="Post">
-                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                        <div class="Head">
-                            <!-- Felhasználói profilkép -->
-                            <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
-                            <!-- Felhasználónév -->
-                            <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
-                                <span>@WhySoSerious</span>
-                                <span style="font-size: 15px;">oogabooga</span>
-                            </div>
-                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
-                            <span class="material-symbols-outlined more-icon">
-                                <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
-                            </span>
-                        </div>
+                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px; text-align: center; margin-top: 20px;">Recent posts by followed users</span>
 
-                        <!-- Poszt szövege (user által írt) -->
-                        <div class="text" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
+                <div class="recentPosts" style="display: flex; align-items: center; background-color: rgb(211, 211, 211); padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
+                    <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
+                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
+                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
                         </div>
+                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">View</button>
+                    </div>
+                </div>
 
-                        <!-- Megemlített emberek (user által) -->
-                        <div class="mentions" style="margin-top: 15px; text-align: justify;">
-                            <span>@kugi @dlt @djtitan @djdanieltitan</span>
+            </div>
+
+            <!-- Main diven belüli középső div (posztok) -->
+            <div class="Posts">
+                <div class="Post">
+                    <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                    <div class="Head">
+                        <!-- Felhasználói profilkép -->
+                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                        <!-- Felhasználónév -->
+                        <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
+                            <span>@WhySoSerious</span>
+                            <span style="font-size: 15px;">oogabooga</span>
                         </div>
+                        <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
+                        </span>
+                    </div>
 
-                        <button class="comments-toggle">Open Comments</button>
-                        <div class="Comments">
-                            <div class="comment-wrapper">
-                                <textarea class="comment-area" placeholder="Write a comment..."></textarea>
-                                <div class="comment-controls">
-                                    <button class="send-button">
-                                        <img src="blackSVG/sendSVG.svg" alt="" srcset="">
-                                    </button>
+                    <!-- Poszt szövege (user által írt) -->
+                    <div class="text" style="margin-top: 15px; text-align: justify;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
+                    </div>
+
+                    <!-- Információ a posztról -->
+                    <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
+                        <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                            
+                            <!-- From Uiverse.io by Tsiangana --> 
+                            <label class="ui-bookmark">
+                                <input type="checkbox" />
+                                <div class="bookmark">
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    style="margin-top:4px"
+                                    class="bi bi-heart-fill"
+                                    height="25"
+                                    width="25"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                    fill-rule="evenodd"
+                                    ></path>
+                                </svg>
                                 </div>
-                            </div>
+                            </label>
+
+                            <span>-count-</span>
+                        </div>
+                        <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                            <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="">
+                            <span>-count-</span>
                         </div>
                     </div>
 
-                    <div class="Post">
-                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                        <div class="Head">
-                            <!-- Felhasználói profilkép -->
-                            <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
-                            <!-- Felhasználónév -->
-                            <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
-                                <span>@WhySoSerious</span>
-                                <span style="font-size: 15px;">oogabooga</span>
-                            </div>
-                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
-                            <span class="material-symbols-outlined more-icon">
-                                <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
-                            </span>
-                        </div>
-
-                        <!-- Poszt szövege (user által írt) -->
-                        <div class="text" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit voluptas modi commodi architecto ducimus cum quo accusamus autem temporibus dignissimos, est consequuntur asperiores necessitatibus libero quasi, laborum amet at dolorem.
-                            Laboriosam alias dolorem aspernatur repellendus expedita aperiam, quos amet doloribus beatae fugit cupiditate? Quidem quaerat qui illo aliquam deleniti autem explicabo consequatur, consectetur soluta aperiam. Cupiditate cumque earum odio hic.
-                        </div>
-
-                        <!-- Megemlített emberek (user által) -->
-                        <div class="mentions" style="margin-top: 15px; text-align: justify;">
-                            <span>@kugi @dlt @djtitan @djdanieltitan</span>
-                        </div>
-
-                        <button class="comments-toggle">Open Comments</button>
-                        <div class="Comments">
-                            <div class="comment-wrapper">
-                                <textarea class="comment-area" placeholder="Write a comment..."></textarea>
-                                <div class="comment-controls">
-                                    <button class="send-button">
-                                        <img src="blackSVG/sendSVG.svg" alt="" srcset="">
-                                    </button>
-                                </div>
+                    <button class="comments-toggle">Open Comments</button>
+                    <div class="Comments">
+                        <div class="comment-wrapper">
+                            <textarea class="comment-area" placeholder="Write a comment..."></textarea>
+                            <div class="comment-controls">
+                                <button class="send-button">
+                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                </button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="Post">
-                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                        <div class="Head">
-                            <!-- Felhasználói profilkép -->
-                            <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
-                            <!-- Felhasználónév -->
-                            <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
-                                <span>@WhySoSerious</span>
-                                <span style="font-size: 15px;">oogabooga</span>
-                            </div>
-                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
-                            <span class="material-symbols-outlined more-icon">
-                                <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
-                            </span>
+                <div class="Post">
+                    <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                    <div class="Head">
+                        <!-- Felhasználói profilkép -->
+                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                        <!-- Felhasználónév -->
+                        <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
+                            <span>@WhySoSerious</span>
+                            <span style="font-size: 15px;">oogabooga</span>
                         </div>
+                        <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
+                        </span>
+                    </div>
 
-                        <!-- Poszt szövege (user által írt) -->
-                        <div class="text" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, molestias enim? Animi, pariatur nam incidunt soluta amet repellendus sunt enim ut quod asperiores quidem nihil molestiae atque eos alias perferendis.
-                        </div>
+                    <!-- Poszt szövege (user által írt) -->
+                    <div class="text" style="margin-top: 15px; text-align: justify;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit voluptas modi commodi architecto ducimus cum quo accusamus autem temporibus dignissimos, est consequuntur asperiores necessitatibus libero quasi, laborum amet at dolorem.
+                        Laboriosam alias dolorem aspernatur repellendus expedita aperiam, quos amet doloribus beatae fugit cupiditate? Quidem quaerat qui illo aliquam deleniti autem explicabo consequatur, consectetur soluta aperiam. Cupiditate cumque earum odio hic.
+                    </div>
 
-                        <!-- Megemlített emberek (user által) -->
-                        <div class="mentions" style="margin-top: 15px; text-align: justify;">
-                            <span>@kugi @dlt @djtitan @djdanieltitan</span>
-                        </div>
-
-                        <button class="comments-toggle">Open Comments</button>
-                        <div class="Comments">
-                            <div class="comment-wrapper">
-                                <textarea class="comment-area" placeholder="Write a comment..."></textarea>
-                                <div class="comment-controls">
-                                    <button class="send-button">
-                                        <img src="blackSVG/sendSVG.svg" alt="" srcset="">
-                                    </button>
+                    <!-- Információ a posztról -->
+                    <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
+                        <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                            
+                            <!-- From Uiverse.io by Tsiangana --> 
+                            <label class="ui-bookmark">
+                                <input type="checkbox" />
+                                <div class="bookmark">
+                                <svg
+                                    viewBox="0 0 16 16"
+                                    style="margin-top:4px"
+                                    class="bi bi-heart-fill"
+                                    height="25"
+                                    width="25"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                    fill-rule="evenodd"
+                                    ></path>
+                                </svg>
                                 </div>
-                            </div>
+                            </label>
+
+                            <span>-count-</span>
+                        </div>
+                        <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                            <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="">
+                            <span>-count-</span>
                         </div>
                     </div>
 
-                    <div class="Post">
-                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                        <div class="Head">
-                            <!-- Felhasználói profilkép -->
-                            <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
-                            <!-- Felhasználónév -->
-                            <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
-                                <span>@WhySoSerious</span>
-                                <span style="font-size: 15px;">oogabooga</span>
-                            </div>
-                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
-                            <span class="material-symbols-outlined more-icon">
-                                <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
-                            </span>
-                        </div>
-
-                        <!-- Poszt szövege (user által írt) -->
-                        <div class="text" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
-                            Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
-                            Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
-                            Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
-                            Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
-                        </div>
-
-                        <!-- Megemlített emberek (user által) -->
-                        <div class="mentions" style="margin-top: 15px; text-align: justify;">
-                            <span>@kugi @dlt @djtitan @djdanieltitan</span>
-                        </div>
-
-                        <button class="comments-toggle">Open Comments</button>
-                        <div class="Comments">
-                            <div class="comment-wrapper">
-                                <textarea class="comment-area" placeholder="Write a comment..."></textarea>
-                                <div class="comment-controls">
-                                    <button class="send-button">
-                                        <img src="blackSVG/sendSVG.svg" alt="" srcset="">
-                                    </button>
-                                </div>
+                    <button class="comments-toggle">Open Comments</button>
+                    <div class="Comments">
+                        <div class="comment-wrapper">
+                            <textarea class="comment-area" placeholder="Write a comment..."></textarea>
+                            <div class="comment-controls">
+                                <button class="send-button">
+                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                </button>
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div class="Post">
+                    <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                    <div class="Head">
+                        <!-- Felhasználói profilkép -->
+                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                        <!-- Felhasználónév -->
+                        <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
+                            <span>@WhySoSerious</span>
+                            <span style="font-size: 15px;">oogabooga</span>
+                        </div>
+                        <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
+                        </span>
+                    </div>
+
+                    <!-- Poszt szövege (user által írt) -->
+                    <div class="text" style="margin-top: 15px; text-align: justify;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, molestias enim? Animi, pariatur nam incidunt soluta amet repellendus sunt enim ut quod asperiores quidem nihil molestiae atque eos alias perferendis.
+                    </div>
+
+                    <!-- Információ a posztról -->
+                    <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
+                        <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                            
+                        <!-- From Uiverse.io by Tsiangana --> 
+                        <label class="ui-bookmark">
+                            <input type="checkbox" />
+                            <div class="bookmark">
+                            <svg
+                                viewBox="0 0 16 16"
+                                style="margin-top:4px"
+                                class="bi bi-heart-fill"
+                                height="25"
+                                width="25"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                            </div>
+                        </label>
+
+                            <span>-count-</span>
+                        </div>
+                        <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                            <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="">
+                            <span>-count-</span>
+                        </div>
+                    </div>
+
+                    <button class="comments-toggle">Open Comments</button>
+                    <div class="Comments">
+                        <div class="comment-wrapper">
+                            <textarea class="comment-area" placeholder="Write a comment..."></textarea>
+                            <div class="comment-controls">
+                                <button class="send-button">
+                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Post">
+                    <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                    <div class="Head">
+                        <!-- Felhasználói profilkép -->
+                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                        <!-- Felhasználónév -->
+                        <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
+                            <span>@WhySoSerious</span>
+                            <span style="font-size: 15px;">oogabooga</span>
+                        </div>
+                        <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
+                        </span>
+                    </div>
+
+                    <!-- Poszt szövege (user által írt) -->
+                    <div class="text" style="margin-top: 15px; text-align: justify;">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
+                        Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
+                        Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
+                        Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
+                        Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
+                    </div>
+
+                    <!-- Információ a posztról -->
+                    <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
+                        <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                            
+                        <!-- From Uiverse.io by Tsiangana --> 
+                        <label class="ui-bookmark">
+                            <input type="checkbox" />
+                            <div class="bookmark">
+                            <svg
+                                viewBox="0 0 16 16"
+                                style="margin-top:4px"
+                                class="bi bi-heart-fill"
+                                height="25"
+                                width="25"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                            </div>
+                        </label>
+
+                            <span>-count-</span>
+                        </div>
+                        <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                            <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="">
+                            <span>-count-</span>
+                        </div>
+                    </div>
+
+                    <button class="comments-toggle">Open Comments</button>
+                    <div class="Comments">
+                        <div class="comment-wrapper">
+                            <textarea class="comment-area" placeholder="Write a comment..."></textarea>
+                            <div class="comment-controls">
+                                <button class="send-button">
+                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Post">
+                    <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                    <div class="Head">
+                        <!-- Felhasználói profilkép -->
+                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                        <!-- Felhasználónév -->
+                        <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
+                            <span>@WhySoSerious</span>
+                            <span style="font-size: 15px;">oogabooga</span>
+                        </div>
+                        <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
+                        </span>
+                    </div>
+
+                    <!-- Poszt szövege (user által írt) -->
+                    <div class="text" style="margin-top: 15px; text-align: justify;">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
+                        Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
+                        Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
+                        Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
+                        Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
+                    </div>
+
+                    <!-- Információ a posztról -->
+                    <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
+                        <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                            
+                        <!-- From Uiverse.io by Tsiangana --> 
+                        <label class="ui-bookmark">
+                            <input type="checkbox" />
+                            <div class="bookmark">
+                            <svg
+                                viewBox="0 0 16 16"
+                                style="margin-top:4px"
+                                class="bi bi-heart-fill"
+                                height="25"
+                                width="25"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                            </div>
+                        </label>
+
+                            <span>-count-</span>
+                        </div>
+                        <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                            <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="">
+                            <span>-count-</span>
+                        </div>
+                    </div>
+
+                    <button class="comments-toggle">Open Comments</button>
+                    <div class="Comments">
+                        <div class="comment-wrapper">
+                            <textarea class="comment-area" placeholder="Write a comment..."></textarea>
+                            <div class="comment-controls">
+                                <button class="send-button">
+                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </body>
-    </html>
+    </div>
+</body>
+</html>

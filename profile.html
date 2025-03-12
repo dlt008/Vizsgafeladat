@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/teszt.css">
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+<body>
+    <div class="top-left"></div>
+    <div class="top">
+        <h1>EchoMap</h1>
+    </div>
+    <div class="left">
+        <div class="left-icons">
+            <!-- Baloldali navigációs menü buttonok/ikonok -->
+            <span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span>
+            <hr>
+            <span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="News icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Chat icon" srcset=""></span>
+            <hr>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="blackSVG/darkmodeSVG.svg" alt="Dark mode icon" srcset=""></span>
+            <hr>
+            <span class="material-symbols-outlined" data-tooltip="Settings"><img src="blackSVG/tuneSVG.svg" alt="Settings icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Logout"><img src="blackSVG/logoutSVG.svg" alt="Logout icon" srcset=""></span>
+        </div>
+    </div>
+    <div class="main">
+
+        <div class="Header" style="margin: 30px;">
+            <div class="pfpbackground">
+                <div class="buttons" style="display: flex; flex-wrap: wrap; flex-direction: column;">
+                    <span class="material-symbols-outlined" style="padding:5px"><img src="./SVG icons/cameraSVG.svg" alt="" srcset=""></span>
+                    <span class="material-symbols-outlined" style="padding:5px"><img src="./SVG icons/addSVG.svg" alt="" srcset=""></span>
+                    <span class="material-symbols-outlined" style="padding:5px"><img src="./SVG icons/reportflagSVG.svg" alt="" srcset=""></span>
+                </div>
+                <div class="profilepicture"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="UserTeszt"></div>
+
+</body>
+</html>
