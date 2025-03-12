@@ -527,6 +527,21 @@ body:has(.left.expanded) {
     transform: translateY(-50%);
 }
 
+.Comments {
+  display: none;
+}
+.Comments.expanded {
+  display: block;
+}
+.comments-toggle {
+  all: unset;
+  margin-top: 10px;
+
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
 .send-button {
     all: unset;
     cursor: pointer;

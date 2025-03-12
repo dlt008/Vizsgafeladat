@@ -3,24 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="css/teszt.css">
-    <style>
-        .Comments {
-            display: none;
-        }
-        .Comments.expanded {
-            display: block;
-        }
-        .comments-toggle {
-            all: unset;
-            margin-top: 10px;
-
-            cursor: pointer;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
     <script src="js/toggleComments.js"></script>
     <script src="js/responsive.js"></script>
 </head>
@@ -32,15 +16,15 @@
     <div class="left">
         <div class="left-icons">
             <!-- Baloldali navigációs menü buttonok/ikonok -->
-            <span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span>
-            <span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span>
+            <a href="teszt.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span></a>
+            <a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="News icon" srcset=""></span>
-            <span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Chat icon" srcset=""></span>
+            <a href="news.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/newsSVG.svg" alt="Person icon" srcset=""></span></a>
+            <a href="chat.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/chatSVG.svg" alt="Person icon" srcset=""></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="blackSVG/darkmodeSVG.svg" alt="Dark mode icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="blackSVG/darkmodeSVG.svg" alt="Dark mode icon" srcset=""></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Settings"><img src="blackSVG/tuneSVG.svg" alt="Settings icon" srcset=""></span>
+            <a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/tuneSVG.svg" alt="Person icon" srcset=""></span></a>
             <span class="material-symbols-outlined" data-tooltip="Logout"><img src="blackSVG/logoutSVG.svg" alt="Logout icon" srcset=""></span>
         </div>
     </div>
@@ -61,7 +45,6 @@
                 <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Who to follow</span>
 
                 <div class="Recommended" style="display: flex; align-items: center; background-color: rgb(211, 211, 211); padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
-
                     <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
                         <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
                         <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
