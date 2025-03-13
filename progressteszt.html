@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+:root {
+  --blue: #00bbe4;
+  --dark-blue: #5D7582;
+  --gray: #5e7583;
+  --background: #1B252B;
+  --circle-diameter: 20rem;
+  --wrapper-height: calc(var(--circle-diameter) / 2)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after { 
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--background);
+  font-family: sans-serif;
+  box-sizing: border-box;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  background-color: var(--background);
+}
+
+.progress {
+  position: relative;
+  margin: auto auto;
+  padding: 1rem;
+  width: var(--circle-diameter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar-overflow {
+  position: relative;
+  overflow: hidden; 
+  width: var(--circle-diameter); 
+  height: 10rem; 
+}
+
+.bar {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: var(--circle-diameter); 
+  height: var(--circle-diameter);
+  border-radius: 50%;
+  border: 0.5rem solid var(--gray);  
+  border-bottom-color: var(--blue); 
+  border-right-color: var(--blue);
+  
+  /* 100% = 180° => ° = % * 1.8 */
+  --rotation: calc(45deg + calc(var(--percent) * 1.8 * 1deg));
+  transform: rotate(var(--rotation));
+}
+
+.info {
+  position: absolute;
+  background-color: var(--blue);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  min-width: 7.5rem;
+  font-weight: bold;
+}
+
+.info h2 {
+  font-size: 2rem;
+}
+.info p { 
+  
+    </style>
+    <script>
+    $(".progress").each(function(){
+  
+    var $bar = $(this).find(".bar");
+    var $val = $(this).find("span");
+    var perc = parseInt( $val.text(), 10);
+
+    $({p:0}).animate({p:perc}, {
+            duration: 3000,
+            easing: "swing",
+            step: function(p) {
+            $bar.css({
+                transform: "rotate("+ (45+(p*1.8)) +"deg)", // 100%=180° so: ° = % * 1.8
+                // 45 is to add the needed rotation to have the green borders at the bottom
+            });
+            $val.text(p|0);
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="progress">
+        <div class="barOverflow">
+          <div class="bar"></div>
+        </div>
+        <span>10</span>%
+      </div>
+      
+      <div class="progress">
+        <div class="barOverflow">
+          <div class="bar"></div>
+        </div>
+        <span>100</span>%
+      </div>
+      
+      <div class="progress">
+        <div class="barOverflow">
+          <div class="bar"></div>
+        </div>
+        <span>34</span>%
+      </div>
+      
+      <div class="progress">
+        <div class="barOverflow">
+          <div class="bar"></div>
+        </div>
+        <span>56.5</span>%
+      </div>
+</body>
+</html>
