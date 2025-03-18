@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <link rel="stylesheet" href="css/light-mode css/light-mode home.css">
+    <!--<link rel="stylesheet" href="css/light-mode css/light-mode home.css">-->
+    <link rel="stylesheet" href="css/dark-mode css/dark-mode home.css">
     <script src="js/responsive.js"></script>
     <script src="js/toggleComments.js"></script>
     <script src="js/progressBar.js"></script>
@@ -19,7 +20,7 @@
         .profileInformation {
             display: grid;
             grid-template-columns: 840px 290px;
-            background-color: rgb(226, 226, 226);
+            /*background-color: rgb(226, 226, 226);*/
         }
 
         .segitseg {
@@ -58,7 +59,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border: 6px solid rgb(226, 226, 226);
+            /*border: 6px solid rgb(226, 226, 226);*/
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -103,16 +104,19 @@
     <div class="left">
         <div class="left-icons">
             <!-- Baloldali navigációs menü buttonok/ikonok -->
-            <a href="teszt.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span></a>
-            <a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span></a>
+            <!-- <a href="teszt.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span></a>-->
+            <a href="teszt.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Home"><img src="whiteSVG/home_40dp_FFF_FILL0_wght400_GRAD0_opsz40.svg" alt="Home icon" srcset=""></span></a>
+            <!--<a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span></a>-->
+            <a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="whiteSVG/person_40dp_FFF_FILL0_wght400_GRAD0_opsz40.svg" alt="Person icon" srcset=""></span></a>
             <hr>
-            <a href="news.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="Person icon" srcset=""></span></a>
-            <a href="chat.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Person icon" srcset=""></span></a>
+            <!--<a href="news.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="Person icon" srcset=""></span></a>-->
+            <a href="news.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="News"><img src="whiteSVG/newsmode_40dp_FFF_FILL0_wght400_GRAD0_opsz40.svg" alt="Person icon" srcset=""></span></a>
+            <!--<a href="chat.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Person icon" srcset=""></span></a>-->
+            <a href="chat.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="whiteSVG/forum_40dp_FFF_FILL0_wght400_GRAD0_opsz40.svg" alt="Person icon" srcset=""></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="blackSVG/darkmodeSVG.svg" alt="Dark mode icon" srcset=""></span></a>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="whiteSVG/light_mode_40dp_FFF_FILL0_wght400_GRAD0_opsz40.svg" alt="Dark mode icon" srcset=""></span></a>
             <hr>
-            <a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Settings"><img src="blackSVG/tuneSVG.svg" alt="Person icon" srcset=""></span></a>
-            <span class="material-symbols-outlined" data-tooltip="Logout"><img src="blackSVG/logoutSVG.svg" alt="Logout icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Logout"><img src="whiteSVG/logout_40dp_FFF_FILL0_wght400_GRAD0_opsz40.svg" alt="Logout icon" srcset=""></span>
         </div>
     </div>
     <div class="main">
@@ -204,21 +208,35 @@
                         </div>
                     </div>
 
-                    <button class="comments-toggle">Open Comments</button>
-                    <div class="Comments">
-                        <div class="comment-wrapper">
-                            <textarea class="comment-area" placeholder="Write a comment..."></textarea>
-                            <div class="comment-controls">
-                                <button class="send-button">
-                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
-                                </button>
+                    <div class="commentSection">
+
+                        <button class="comments-toggle">Open Comments</button>
+                        <div class="Comments">
+                            <div class="comment-wrapper">
+                                <textarea class="comment-area" placeholder="Write a comment..."></textarea>
+                                <div class="comment-controls">
+                                    <button class="send-button">
+                                        <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                    </button>
+                                </div>
                             </div>
+
+                            <div class="userComment" style="width: 95%; height: 100%; background-color: red; border-radius: 5px; float: right; padding: 20px;">
+                                <div class="postPfp" style="width: 50px; height: 50px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                                <div class="text" style="margin-top: 15px; text-align: justify;">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
+                                    Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
+                                    Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
+                                    Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
+                                    Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
-
             </div>
-
             <div class="userFeed">
                 
                 <div class="searchBar">
