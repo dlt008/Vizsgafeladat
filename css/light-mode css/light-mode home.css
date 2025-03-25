@@ -379,7 +379,7 @@ body:has(.left.expanded) {
     transition: background-color 0.3s ease;
 }
 
-.leftSideDiv {
+.userFeed  {
     grid-row: 1/6;
     grid-column: 2/3;
     background-color: rgb(226, 226, 226);
@@ -398,7 +398,7 @@ body:has(.left.expanded) {
     text-align: justify;
 }
 
-.Head {
+.userPostInfo {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -415,14 +415,14 @@ body:has(.left.expanded) {
     border: 2px solid black;
 }
 
-.Head {
+.userPostInfo {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 15px;
 }
 
-.Head span {
+.userPostInfo span {
     font-size: 1.1em;
     font-weight: 500;
     color: black;
@@ -445,7 +445,7 @@ body:has(.left.expanded) {
     height: 24px;
 }
 
-.text {
+.postText {
     margin: 15px 0;
     line-height: 1.5;
     color: black;
@@ -722,4 +722,97 @@ body:has(.left.expanded) {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+}
+
+hr {
+  all: unset; 
+  background-color: rgba(0, 0, 0, 0.05); 
+  width: calc(100% + 40px); 
+  height: 1px; 
+  margin: 20px -20px;
+}
+
+.rightSideDiv hr {
+  all: unset; 
+  background-color: rgba(0, 0, 0, 0.05); 
+  width: calc(100% + 40px); 
+  height: 1px; 
+  margin: 20px -20px;
+}
+
+.recommendationDivs {
+  display: flex; 
+  align-items: center; 
+  background-color: rgb(211, 211, 211); 
+  padding: 10px; 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recommendedUser {
+  display: flex; 
+  flex-direction: row;
+  gap: 5px; 
+  align-items: center; 
+  width: 100%;
+}
+
+.userProfilePicture {
+  background-image: url('../../jonkler.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+}
+
+.recommendedUser button {
+  all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(226, 226, 226); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;
+}
+
+.recommendedUser span {
+  font-size: 15px;
+}
+
+.userFeed .header {
+  margin-left: auto; 
+  margin-right: auto; 
+  font-size: 20px; 
+  text-align: center;
+}
+
+.searchBar button {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.userPostInfo .profilePicture {
+  width: 65px; 
+  height: 65px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-image: url('../../jonkler.webp');
+  border-radius: 100%;
+  overflow: hidden; /* A divből való "kifolyás" blokkolása */
+  border: 2px solid black;
+}
+
+.usernames {
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2px; 
+  flex-grow: 1;
+}
+
+.usernames .username {
+  font-size: 15px;
 }
