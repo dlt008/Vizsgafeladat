@@ -25,10 +25,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease, grid-template-columns 0.3s ease;
 }
 
-body:has(.left.expanded) {
-    grid-template-columns: 200px 1fr;
-}
-
 .top-left {
     grid-area: top-left;
     background-color: #1d1d1d;
@@ -48,7 +44,7 @@ body:has(.left.expanded) {
 }
 
 .top h1 {
-    color: #ffffff;
+    color: rgb(192, 192, 192);
     margin: 0;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -81,7 +77,6 @@ body:has(.left.expanded) {
     position: fixed;
     gap: 20px;
 }
-
 
 .link-size {
     width: 100%;
@@ -120,7 +115,7 @@ body:has(.left.expanded) {
     position: absolute;
     left: 100%;
     background-color: #000000;
-    color: #ffffff;
+    color: rgb(192, 192, 192);
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 14px;
