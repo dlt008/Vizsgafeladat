@@ -359,7 +359,8 @@ body:has(.left.expanded) {
 .PostDiv {
   height: 100%;
   display: grid;
-  grid-template-columns: 840px 290px;
+  grid-template-columns: 840px minmax(240px, auto);
+
 }   
 
 .Posts {
@@ -779,6 +780,7 @@ body:has(.left.expanded) {
   display: flex; 
   justify-content: center; 
   align-items: center;
+  margin-left: 10px;
 }
 
 .recommendedUser span {
