@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
-    <!--<link rel="stylesheet" href="css/light-mode css/light-mode home.css">-->
-    <link rel="stylesheet" href="css/dark-mode css/dark-mode home.css">
+    <link rel="stylesheet" href="css/light-mode css/light-mode home.css" type="text/css" id="theme">
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
     <script src="js/responsive.js"></script>
     <script src="js/toggleComments.js"></script>
@@ -95,6 +94,7 @@
         }
 
     </style>
+
 </head>
 <body>
     <div class="top-left"></div>
@@ -104,19 +104,15 @@
     <div class="left">
         <div class="left-icons">
             <!-- Baloldali navigációs menü buttonok/ikonok -->
-            <!-- <a href="teszt.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Home"><img src="blackSVG/homeSVG.svg" alt="Home icon" srcset=""></span></a>-->
-            <a href="teszt.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="whiteNavSVG/home_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="Home icon" srcset=""></span></a>
-            <!--<a href="profile.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="blackSVG/personSVG.svg" alt="Person icon" srcset=""></span></a>-->
-            <a href="profile.html" target=" _blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="whiteNavSVG/person_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="Person icon" srcset=""></span></a>
+            <a href="teszt.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></span></a>
+            <a href="profile.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></span></a>
             <hr>
-            <!--<a href="news.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="News"><img src="blackSVG/newsSVG.svg" alt="Person icon" srcset=""></span></a>-->
-            <a href="news.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="News"><img src="whiteNavSVG/newsmode_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="Person icon" srcset=""></span></a>
-            <!--<a href="chat.html" target="_blank"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="blackSVG/chatSVG.svg" alt="Person icon" srcset=""></span></a>-->
-            <a href="chat.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="whiteNavSVG/forum_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="Person icon" srcset=""></span></a>
+            <a href="news.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="News"><img src="Icons/Black Navbar Icons/newsmode.svg" alt="Person icon" class="theme-icon"></span></a>
+            <a href="chat.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="Icons/Black Navbar Icons/forum.svg" alt="Person icon" class="theme-icon"></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Dark Mode" id="theme-toggle" class="link-size"><img src="whiteNavSVG/light_mode_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="Dark mode icon" srcset=""></span></a>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="cssToggle();toggleTheme()"><img src="Icons/Black Navbar Icons/theme.svg" alt="Dark mode icon" class="theme-icon"></span>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="whiteNavSVG/logout_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="Logout icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" class="theme-icon"></span>
         </div>
     </div>
     <div class="main">
@@ -300,7 +296,7 @@
                         <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(49, 49, 49); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">View</button>
                     </div>
                 </div>
-
-        </div>        
+        </div>
+        <script src="js/iconChange.js"></script>
 </body>
 </html>

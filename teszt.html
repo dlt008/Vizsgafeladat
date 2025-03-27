@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <!--<link rel="stylesheet" href="css/teszt.css">-->
-    <link rel="stylesheet" href="css/light-mode css/light-mode home.css">
+    <link rel="stylesheet" href="css/light-mode css/light-mode home.css" type="text/css" id="theme">
+
     <link rel="stylesheet" href="css/universal.css">
     <link rel="shortcut icon" href="output-onlinepngtools.png" type="image/x-icon">
     <script src="js/toggleComments.js"></script>
     <script src="js/responsive.js"></script>
+    <script>
+        function cssToggle() {
+            // Select the <link> element
+            let theme = document.getElementById('theme');
+
+            // Toggle between light.css and dark.css
+            if (theme.getAttribute('href') == 'css/light-mode css/light-mode home.css') {
+                theme.setAttribute('href', 'css/dark-mode css/dark-mode home.css');
+            } else {
+                theme.setAttribute('href', 'css/light-mode css/light-mode home.css');
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="top-left"></div>
@@ -19,15 +33,15 @@
     <div class="left">
         <div class="left-icons">
             <!-- Baloldali navigációs menü buttonok/ikonok -->
-            <a href="teszt.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" srcset=""></span></a>
-            <a href="profile.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" srcset=""></span></a>
+            <a href="teszt.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></span></a>
+            <a href="profile.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></span></a>
             <hr>
-            <a href="news.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="News"><img src="Icons/Black Navbar Icons/newsmode.svg" alt="Person icon" srcset=""></span></a>
-            <a href="chat.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="Icons/Black Navbar Icons/forum.svg" alt="Person icon" srcset=""></span></a>
+            <a href="news.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="News"><img src="Icons/Black Navbar Icons/newsmode.svg" alt="Person icon" class="theme-icon"></span></a>
+            <a href="chat.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="Icons/Black Navbar Icons/forum.svg" alt="Person icon" class="theme-icon"></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="myFunction()"><img src="Icons/Black Navbar Icons/dark mode.svg" alt="Dark mode icon" srcset=""></span></a>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="cssToggle();toggleTheme()"><img src="Icons/Black Navbar Icons/theme.svg" alt="Dark mode icon" class="theme-icon"></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" srcset=""></span>
+            <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" class="theme-icon"></span>
         </div>
     </div>
     <div class="main">
@@ -54,7 +68,7 @@
                     <div class="recommendedUser">
                         <div class="userProfilePicture"></div>
                         <div class="usernames">
-                            <p>Cservenák Dániel</p>
+                            <p>teszt teszt teszt </p>
                             <span>@WhySoSerious</span>
                         </div>
                         <button>Follow</button>
