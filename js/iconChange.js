@@ -7,7 +7,6 @@ function toggleTheme() {
     cssToggle();
 }
 
-
 function updateIcons() {
     const icons = document.querySelectorAll(".theme-icon");
     

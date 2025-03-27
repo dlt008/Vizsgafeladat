@@ -89,6 +89,9 @@ body {
     background-color: #191919;
     transition: background-color 0.3s ease;
     padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .left-icons .material-symbols-outlined {
@@ -174,8 +177,6 @@ body {
     height: 100%;
     margin-left: auto;
     display: grid;
-    grid-template-columns: 840px 290px;
-    grid-template-rows: repeat(5, 1fr);
     background: none;
 }   
 
@@ -645,4 +646,226 @@ input[type=text]{
 .more-icon img {
     width: 27px;
     height: 27px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profileInformation {
+  display: grid;
+  grid-template-columns: 840px minmax(290px, auto);
+  /*background-color: rgb(226, 226, 226);*/
+}
+
+.segitseg {
+  grid-column: 1/2;
+  padding: 20px;
+}
+
+.userProfile {
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-column: 1/2;
+}
+
+.userFeed {
+  grid-column: 2/3;
+  padding: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.userFeed hr {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.05); 
+  width: calc(100% + 40px); 
+  height: 1px; 
+  margin: 20px -20px;
+}
+
+.backgroundImage {
+  z-index: 1;
+  grid-row: 1/3;
+  grid-column: 1/9;
+  background-color: rgb(128, 128, 128);
+}
+
+.leftInformation {
+  grid-row: 3/4;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.rightInformation {
+  grid-row: 3/4;
+  grid-column: 6/9;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.middleInformation {
+  grid-row: 4/5;
+  grid-column: 4/6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.commentInformation {
+  display: flex; 
+  align-items: center; 
+  gap: 5px;
+}
+
+.progressBar {
+  width: 100%; height: 27px; background-color: rgb(65, 65, 65); border-radius: 50px; margin-bottom: 20px; padding: 4px
+}
+
+.Recommended {
+  display: flex; 
+  align-items: center; 
+  background-color: #191919; 
+  padding: 10px; 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column;
+  gap: 10px
+}
+
+.user {
+  display: flex; 
+  gap: 5px; 
+  align-items: center; 
+  width: 100%;
+}
+
+.usernames {
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2px; 
+  flex-grow: 1;
+}
+
+.user button {
+  border: none;
+  padding: 7px;
+  width: 25%;
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-size: 14px;
+  background-color: #313131; 
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  color: rgb(192, 192, 192);
+  outline: none;
+}
+
+.recentPostPfp {
+  background-image: url('../../jonkler.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  border: 2px solid rgb(192, 192, 192);
+}
+
+#recentPostHeader {
+  margin-top: 20px;
+}
+
+.recentPosts {
+  display: flex; 
+  align-items: center; 
+  background-color: #191919; 
+  padding: 10px; 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column;
+}
+
+.recentPosts button {
+  border: none;
+  padding: 7px;
+  width: 25%;
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-size: 14px;
+  background-color: #313131; 
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.userFeed .header {
+  margin-left: auto; 
+  margin-right: auto; 
+  font-size: 20px; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userProgress {
+  width: 20%; 
+  height: 100%; 
+  background-color: rgb(145, 145, 145); 
+  border-radius: 50px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: white;
+}
+
+.progressBar {
+  width: 100%; 
+  height: 27px; 
+  background-color: rgb(65, 65, 65); 
+  border-radius: 50px; 
+  margin-bottom: 20px; 
+  padding: 5px;
+}
+
+.toDoList {
+  display: flex; 
+  justify-content: center;
+}
+
+.userProfile hr {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.05); 
+  height: 1px; 
+  width: 100%; 
+  margin-top: auto; 
+  margin-bottom: auto; 
+  grid-row: 4/5; 
+  grid-column: 1/9; 
+  transform: translateY(20px);
+}
+
+.middleInformation #birthName {
+  font-size: 22px;
 }

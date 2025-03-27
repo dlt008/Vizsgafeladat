@@ -8,93 +8,6 @@
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
     <script src="js/responsive.js"></script>
     <script src="js/toggleComments.js"></script>
-    <style>
-
-        .main {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .profileInformation {
-            display: grid;
-            grid-template-columns: 840px 290px;
-            /*background-color: rgb(226, 226, 226);*/
-        }
-
-        .segitseg {
-            grid-column: 1/2;
-            padding: 20px;
-        }
-
-        .userProfile {
-            display: grid;
-            grid-template-columns: repeat(8, 100px);
-            grid-template-rows: repeat(4, 100px);
-            grid-column: 1/2;
-        }
-
-        .userFeed {
-            grid-column: 2/3;
-            padding: 20px;
-            border-left: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-
-        .backgroundImage {
-            z-index: 1;
-            grid-row: 1/3;
-            grid-column: 1/9;
-            background-color: rgb(128, 128, 128);
-        }
-
-        .profilePicture {
-            z-index: 2;
-            grid-row: 2/4;
-            grid-column: 4/6;
-            background-image: url('jonkler.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border: 7px solid #1d1d1d;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        .leftInformation {
-            grid-row: 3/4;
-            grid-column: 1/4;
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            margin-top: 10px;
-            gap: 20px;
-        }
-
-        .rightInformation {
-            grid-row: 3/4;
-            grid-column: 6/9;
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            margin-top: 10px;
-        }
-
-        .middleInformation {
-            grid-row: 4/5;
-            grid-column: 4/6;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-    </style>
-
 </head>
 <body>
     <div class="top-left"></div>
@@ -127,46 +40,46 @@
                     <div class="backgroundImage"></div>
                     <div class="profilePicture"></div>
                     <div class="leftInformation">
-                        <div class="ideasInformation" style="display: flex; align-items: center;">
-                            <img src="whiteSVG/lightbulb_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                        <div class="informationCenter">
+                            <img src="Icons/Black Navbar Icons/lightbulb.svg" alt="" class="theme-icon"><span>10</span>
                         </div>
-                        <div class="followerInformation" style="display: flex; align-items: center;">
-                            <img src="whiteSVG/person_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                        <div class="informationCenter">
+                            <img src="Icons/Black Navbar Icons/person.svg" alt="" class="theme-icon"><span>10</span>
                         </div>
                     </div>
                     <div class="rightInformation">
-                        <div class="ideasInformation" style="display: flex; align-items: center;">
-                            <img src="whiteSVG/favorite_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                        <div class="informationCenter">
+                            <img src="Icons/Black Navbar Icons/favorite.svg" alt="" class="theme-icon"><span>10</span>
                         </div>
-                        <div class="followerInformation" style="display: flex; align-items: center;">
-                            <img src="whiteSVG/comment_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="" srcset="" style="width: 45px; height: 45px;"><span>10</span>
+                        <div class="informationCenter">
+                            <img src="Icons/Black Navbar Icons/comment.svg" alt="" class="theme-icon"><span>10</span>
                         </div>
                     </div>
                     <div class="middleInformation">
-                        <span style="font-size: 22px;">WhySoSerious</span>
-                        <span>goofygoober</span>
+                        <span id="birthName">WhySoSerious</span>
+                        <span class="username">goofygoober</span>
                     </div>
-                    <hr style="all: unset; background-color: rgba(255, 255, 255, 0.05); height: 1px; width: 100%; margin-top: auto; margin-bottom: auto; grid-row: 4/5; grid-column: 1/9; transform: translateY(20px);">
+                    <hr>
                 </div>
 
                 <div class="Post" style="margin-top: 10px;">
                     <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
                     <div class="Head">
                         <!-- Felhasználói profilkép -->
-                        <div class="postPfp" style="width: 65px; height: 65px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
+                        <div class="postPfp"></div>
                         <!-- Felhasználónév -->
-                        <div style="display: flex; flex-wrap: wrap; flex-direction: column; gap: 5px">
+                        <div class="postUsername">
                             <span>@WhySoSerious</span>
                             <span style="font-size: 15px;">oogabooga</span>
                         </div>
                         <!-- More button ami "report"/"save" buttonokat tartalmazza -->
-                        <span class="material-symbols-outlined more-icon">
-                            <img src="whiteSVG/more_horiz_40dp_C0C0C0_FILL1_wght400_GRAD0_opsz40.svg" alt="More icon" srcset="">
+                        <span class="material-symbols-outlined more-icon" class="postOptions">
+                            <img src="Icons/Black Navbar Icons/more.svg" alt="More icon" class="theme-icon postOptions">
                         </span>
                     </div>
 
                     <!-- Poszt szövege (user által írt) -->
-                    <div class="text" style="margin-top: 15px; text-align: justify;">
+                    <div class="text">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
                         Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
                         Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
@@ -175,8 +88,8 @@
                     </div>
 
                     <!-- Információ a posztról -->
-                    <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
-                        <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                    <div class="postInformation">
+                        <div class="likeInformation">
                             
                         <!-- From Uiverse.io by Tsiangana --> 
                         <label class="ui-bookmark">
@@ -200,7 +113,7 @@
 
                             <span>-count-</span>
                         </div>
-                        <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                        <div class="commentInformation">
                             <img src="whiteSVG/comment_25dp_C0C0C0_FILL1_wght400_GRAD0_opsz24.svg" alt="" srcset="">
                             <span>-count-</span>
                         </div>
@@ -244,15 +157,15 @@
                     </button>
                 </div>
 
-                <hr style="all: unset; background-color: rgba(255, 255, 255, 0.05); width: calc(100% + 40px); height: 1px; margin: 20px -20px;">
+                <hr>
 
                 <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Your progress</span>
 
-                <div class="progressBar" style="width: 100%; height: 27px; background-color: rgb(65, 65, 65); border-radius: 50px; margin-bottom: 20px; padding: 4px;">
-                    <div class="userProgress" style="width: 20%; height: 100%; background-color: rgb(145, 145, 145); border-radius: 50px; display: flex; justify-content: center; align-items: center; color: white;"><span>20%</span></div>
+                <div class="progressBar">
+                    <div class="userProgress"><span>20%</span></div>
                 </div>
 
-                <div class="toDoList" style="display: flex; justify-content: center;">
+                <div class="toDoList">
                     <ul">
                         <li>Follow someone</li>
                         <li>Post your first idea</li>
@@ -262,40 +175,40 @@
                     </ul>
                 </div>
 
-                <hr style="all: unset; background-color: rgba(255, 255, 255, 0.05); width: calc(100% + 40px); height: 1px; margin: 20px -20px;">
+                <hr>
 
-                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Who to follow</span>
+                <span class="header">Who to follow</span>
 
-                <div class="Recommended" style="display: flex; align-items: center; background-color: #191919; padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
-                    <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
-                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
-                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                <div class="Recommended">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
                             <p>@Username</p>
                             <span style="font-size: 15px;">Username</span>
                         </div>
-                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(49, 49, 49); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
+                        <button>Follow</button>
                     </div>
                 
-                    <div class="user" style="display: flex; gap: 5px; margin-top: 20px; align-items: center; width: 100%;">
-                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
-                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
                             <p>@Username</p>
                             <span style="font-size: 15px;">Username</span>
                         </div>
-                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(49, 49, 49); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">Follow</button>
+                        <button>Follow</button>
                     </div>
                 </div>
 
-                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px; text-align: center; margin-top: 20px;">Recent posts by followed users</span>
+                <span class="header" id="recentPostHeader">Recent posts by followed users</span>
 
-                <div class="recentPosts" style="display: flex; align-items: center; background-color: #191919; padding: 10px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; flex-direction: column;">
-                    <div class="user" style="display: flex; gap: 5px; align-items: center; width: 100%;">
-                        <div class="postPfp" style="background-image: url('jonkler.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 40px; height: 40px; border-radius: 50%;"></div>
-                        <div class="usernames" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; gap: 2px; flex-grow: 1;">
+                <div class="recentPosts">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
                             <p>@Username</p>
                             <span style="font-size: 15px;">Username</span>
                         </div>
-                        <button style="all: unset; padding: 6px 12px; border-radius: 6px; cursor: pointer; background-color: rgb(49, 49, 49); box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); display: flex; justify-content: center; align-items: center;">View</button>
+                        <button>View</button>
                     </div>
                 </div>
         </div>
