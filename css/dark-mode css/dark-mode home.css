@@ -307,7 +307,7 @@ body {
 .send-button {
     all: unset;
     cursor: pointer;
-    padding: 6px;
+    padding: 3px;
     border-radius: 50%;
     display: flex;
     align-items: center;

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
     <script src="js/responsive.js"></script>
     <script src="js/toggleComments.js"></script>
+    <script src="js/text-area.js"></script>
 </head>
 <body>
     <div class="top-left"></div>
@@ -31,7 +32,6 @@
         </div>
     </div>
     <div class="main">
-
         <div class="profileInformation">
 
             <div class="segitseg">
@@ -119,31 +119,25 @@
                     </div>
 
                     <div class="commentSection">
-
                         <button class="comments-toggle">Open Comments</button>
                         <div class="Comments">
                             <div class="comment-wrapper">
-                                <textarea class="comment-area" placeholder="Write a comment..."></textarea>
-                                <div class="comment-controls">
-                                    <button class="send-button">
-                                        <img src="Icons/Black Navbar Icons/send.svg" alt="Search" class="theme-icon">
-                                    </button>
+                                <div class="text-editor">
+                                    <div class="toolbar">
+                                        <button class="format-btn bold" title="Bold"><b>B</b></button>
+                                        <button class="format-btn italic" title="Italic"><i>I</i></button>
+                                        <button class="format-btn underline" title="Underline"><u>U</u></button>
+                                        <button class="format-btn line-through" title="Strikethrough"><s>S</s></button>
+                                        <select class="font-size" title="Font Size">
+                                            <option value="12px">Small</option>
+                                            <option value="16px" selected>Medium</option>
+                                            <option value="20px">Large</option>
+                                        </select>
+                                    </div>
+                                    <div class="editor-content" contenteditable="true" placeholder="Write a comment..."></div>
                                 </div>
                             </div>
-
-                            <!--<div class="userComment" style="width: 95%; height: 100%; background-color: red; border-radius: 5px; float: right; padding: 20px;">
-                                <div class="postPfp" style="width: 50px; height: 50px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('jonkler.webp');"></div>
-                                <div class="text" style="margin-top: 15px; text-align: justify;">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
-                                    Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
-                                    Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
-                                    Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
-                                    Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
-                                </div>
-                            </div>-->
-
                         </div>
-
                     </div>
                 </div>
             </div>
