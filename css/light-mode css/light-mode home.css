@@ -714,7 +714,6 @@ body:has(.left.expanded) {
   justify-content: space-around;
   align-items: flex-start;
   margin-top: 10px;
-  gap: 20px;
 }
 
 .rightInformation {
@@ -851,6 +850,12 @@ body:has(.left.expanded) {
   height: 45px;
 }
 
+.rightInformation img {
+  height: 45px;
+  width: 45px;
+}
+
+
 .informationCenter {
   display: flex;
   align-items: center;
@@ -876,6 +881,8 @@ body:has(.left.expanded) {
 .Post .text {
   margin-top: 15px; 
   text-align: justify;
+  line-height: 1.5;
+  font-size: 0.95em;
 }
 
 .postInformation {
@@ -891,6 +898,17 @@ body:has(.left.expanded) {
   display: flex; 
   align-items: center; 
   gap: 5px;
+}
+
+.commentInformation {
+  display: flex; 
+  align-items: center; 
+  gap: 5px;
+}
+
+.commentInformation img {
+  width: 25px;
+  height: 25px;
 }
 
 .userProgress {
