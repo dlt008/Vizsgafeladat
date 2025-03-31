@@ -7,11 +7,32 @@
     <!--<link rel="stylesheet" href="css/teszt.css">-->
     <link rel="stylesheet" href="css/light-mode css/light-mode home.css" type="text/css" id="theme">
 
-    <link rel="stylesheet" href="css/universal.css">
+    <!-- <link rel="stylesheet" href="css/universal.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .topLgMargin {
+            margin-top: 20px;
+        }
+
+        .bottomLgMargin {
+            margin-bottom: 20px;
+        }
+
+        .mdFontSize {
+            font-size: 15px;
+        }
+    </style>
     <link rel="shortcut icon" href="output-onlinepngtools.png" type="image/x-icon">
     <script src="js/toggleComments.js"></script>
     <script src="js/responsive.js"></script>
-    <script src="js/homeChange.js"></script>    
+    <script src="js/homeChange.js"></script> 
 </head>
 <body>
     <div class="top-left"></div>
@@ -44,7 +65,7 @@
                 <div class="searchBar">
                     <input placeholder="Search..." class="input" name="text" type="text">
                     <button class="button">
-                        <img src="Icons/Black Navbar Icons/search.svg" alt="Search">
+                        <img src="Icons/Black Navbar Icons/search.svg" alt="Search" class="theme-icon">
                     </button>
                 </div>                
 
@@ -138,7 +159,7 @@
                             <span>-count-</span>
                         </div>
                         <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
-                            <img src="blackSVG/chatBubbleSVG.svg" alt="" srcset="">
+                            <img src="Icons/Black Navbar Icons/forum.svg " alt="" class="theme-icon">
                             <span>-count-</span>
                         </div>
                     </div>
@@ -149,7 +170,7 @@
                             <textarea class="comment-area" placeholder="Write a comment..."></textarea>
                             <div class="comment-controls">
                                 <button class="send-button">
-                                    <img src="blackSVG/sendSVG.svg" alt="" srcset="">
+                                    <img src="Icons/Black Navbar Icons/send.svg" alt="" class="theme-icon">
                                 </button>
                             </div>
                         </div>
