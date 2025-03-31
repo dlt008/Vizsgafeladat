@@ -36,8 +36,8 @@ function updateTooltip() {
 function cssToggle() {
     const theme = document.getElementById('theme');
     if (theme.getAttribute('href').includes('light-mode')) {
-        theme.setAttribute('href', 'css/dark-mode css/dark-mode home.css');
+        theme.setAttribute('href', 'css/dark-mode css/dark-mode profile.css');
     } else {
-        theme.setAttribute('href', 'css/light-mode css/light-mode home.css');
+        theme.setAttribute('href', 'css/light-mode css/light-mode profile.css');
     }
 }

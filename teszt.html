@@ -11,19 +11,7 @@
     <link rel="shortcut icon" href="output-onlinepngtools.png" type="image/x-icon">
     <script src="js/toggleComments.js"></script>
     <script src="js/responsive.js"></script>
-    <script>
-        function cssToggle() {
-            // Select the <link> element
-            let theme = document.getElementById('theme');
-
-            // Toggle between light.css and dark.css
-            if (theme.getAttribute('href') == 'css/light-mode css/light-mode home.css') {
-                theme.setAttribute('href', 'css/dark-mode css/dark-mode home.css');
-            } else {
-                theme.setAttribute('href', 'css/light-mode css/light-mode home.css');
-            }
-        }
-    </script>
+    <script src="js/homeChange.js"></script>    
 </head>
 <body>
     <div class="top-left"></div>
@@ -39,7 +27,9 @@
             <a href="news.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="News"><img src="Icons/Black Navbar Icons/newsmode.svg" alt="Person icon" class="theme-icon"></span></a>
             <a href="chat.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Chat"><img src="Icons/Black Navbar Icons/forum.svg" alt="Person icon" class="theme-icon"></span></a>
             <hr>
-            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="cssToggle();toggleTheme()"><img src="Icons/Black Navbar Icons/theme.svg" alt="Dark mode icon" class="theme-icon"></span></a>
+            <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="toggleTheme()">
+                <img src="Icons/Black Navbar Icons/theme.svg" alt="Theme Toggle" class="theme-icon">
+            </span>
             <hr>
             <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" class="theme-icon"></span>
         </div>
@@ -54,7 +44,7 @@
                 <div class="searchBar">
                     <input placeholder="Search..." class="input" name="text" type="text">
                     <button class="button">
-                        <img src="blackSVG/searchSVG.svg" alt="Search">
+                        <img src="Icons/Black Navbar Icons/search.svg" alt="Search">
                     </button>
                 </div>                
 
@@ -113,7 +103,7 @@
                         </div>
                         <!-- More button ami "report"/"save" buttonokat tartalmazza -->
                         <span class="material-symbols-outlined more-icon">
-                            <img src="blackSVG/morehorizSVG.svg" alt="More icon" srcset="">
+                            <img src="Icons/Black Navbar Icons/more.svg" alt="More icon" class="theme-icon">
                         </span>
                     </div>
 
