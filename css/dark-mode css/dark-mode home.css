@@ -544,6 +544,7 @@ body:has(.left.expanded) {
   cursor: pointer;
   font-size: 14px;
   color: #666;
+  display: flex;
 }
 
 .send-button {
