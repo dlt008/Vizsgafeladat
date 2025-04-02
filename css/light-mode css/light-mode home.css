@@ -553,6 +553,11 @@ body:has(.left.expanded) {
   cursor: pointer;
   font-size: 14px;
   color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .send-button {
