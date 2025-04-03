@@ -14,16 +14,21 @@
 
     <div class="formDiv">
 
+        <span class="header">Login</span>
+
         <form action="">
             <span>Username</span>
             <input type="text" name="username" id="username">
             <span>Password</span>
-            <input type="text" name="password" id="password">
+            <div class="password-container">
+                <input type="password" id="password">
+                <button class="password-btn" type="button"><img src="Icons/visibility.svg" alt="Show Password Button"></button>
+            </div>
             <input type="button" value="Login">
         </form>
 
         <span id="login"><a href="register.html">Don't have an account yet?</a></span>
-
+        <script src="js/password.js"></script>
     </div>
 </body>
 </html>

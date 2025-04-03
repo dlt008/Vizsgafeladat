@@ -360,7 +360,6 @@ body:has(.left.expanded) {
   height: 100%;
   display: grid;
   grid-template-columns: 840px minmax(240px, auto);
-
 }   
 
 .Posts {

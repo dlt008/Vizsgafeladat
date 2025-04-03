@@ -1,0 +1,2 @@
+username minimum 3
+jelszó minimum 4

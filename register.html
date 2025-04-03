@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./css/dark-mode css/loginform.css">
     <title>Register</title>
     <link rel="shortcut icon" href="./output-onlinepngtools.png" type="image/x-icon">
-    <script src="js/password.js"></script>
 </head>
 <body>
     <nav>
@@ -15,25 +14,26 @@
 
     <div class="formDiv">
 
+        <span class="header">Register</span>
+
         <form action="">
             <span>Username</span>
             <input type="text" name="username" id="username">
             <span>Email</span>
             <input type="email" name="email" id="email">
             <span>Password</span>
-            <div class="password">
-                <input class="input" name="password" type="password" id="password">
-                <button class="button">
-                    <img src="Icons/visibility.svg" alt="Search" onclick="showPassword()">
-                </button> 
-            </div>
+            <input type="password" name="password" id="password">
             <span>Confirm Password</span>
-            <input type="text" name="password" id="password">
+            <div class="password-container">
+                <input type="password" id="password" maxlength="20">
+                <button class="password-btn" type="button"><img src="Icons/visibility.svg" alt="Show Password Button"></button>
+            </div>
             <input type="button" value="Register">
         </form>
 
         <span id="login"><a href="login.html">Already have an account?</a></span>
 
     </div>
+    <script src="js/password.js"></script>
 </body>
 </html>
