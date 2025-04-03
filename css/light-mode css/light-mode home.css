@@ -1080,3 +1080,9 @@ body:has(.left.expanded) {
 .editor-content::-webkit-resizer:hover {
   background-color: #aaa;
 } 
+
+a {
+  text-decoration: none;
+  font-style: none;
+  color: #666;
+}

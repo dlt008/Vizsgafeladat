@@ -1108,3 +1108,9 @@ input[type=text]{
   background-position: 10px 10px; 
   background-repeat: no-repeat;
 }
+
+a {
+  text-decoration: none;
+  font-style: none;
+  color: #666;
+}
