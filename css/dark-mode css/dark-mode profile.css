@@ -23,7 +23,6 @@ body {
         "wdth" 100;
     color: rgb(192, 192, 192);
     transition: background-color 0.3s ease, color 0.3s ease, grid-template-columns 0.3s ease;
-    background-color: blue;
 }
 
 .top-left {
@@ -409,6 +408,10 @@ body {
     box-sizing: border-box; /* Include padding in the element's total width */
     width: 50px; /* Fixed width for the button */
     background-color: rgb(20, 20, 20);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    outline: none;
 }
 
 .input:focus {
@@ -956,4 +959,10 @@ input[type=text]{
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+.searchBar button {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
 }
