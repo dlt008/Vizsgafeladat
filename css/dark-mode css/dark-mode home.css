@@ -285,7 +285,7 @@ body:has(.left.expanded) {
   justify-content: center;
   align-items: center;
   position: fixed;
-  gap: 20px;
+  gap: 50px;
 }
 
 .left-icons hr {
@@ -298,8 +298,8 @@ body:has(.left.expanded) {
 }
 
 .link-size {
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .main {
