@@ -4,97 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-        body {
-            font-family: "Roboto", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
-        }
-
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            width: 100%; 
-            height: 50px; 
-            display: flex; 
-            align-items: center; 
-            padding-left: 5px;
-            box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .main {
-            background-color: #f0f0f0;
-            width: 100%;
-            height: 100%;
-            padding: 15px;
-        }
-
-        .Head {
-            display: flex; align-items: center; gap: 5px; background-color: rgb(211, 211, 211);
-        }
-
-        .posts {
-            background-color: rgb(226, 226, 226); text-align: justify; padding: 10px; border-radius: 5px; box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .post {
-            background-color: rgb(211, 211, 211); text-align: justify; padding: 10px; border-radius: 5px; margin-top: 10px;
-        }
-
-        .pfp {
-            width: 50px; height: 50px; background-image: url('jonkler.webp'); background-size: cover; background-repeat: no-repeat;background-position: center; border-radius: 50%;border: 2px solid black;
-        }
-
-        .postUsername {
-            display: flex; align-items: center; gap: 5px;
-        }
-
-        .text {
-            margin-top: 10px;
-        }
-
-
-        .postInformation {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .like, .comment {
-            display: flex;
-            align-items: center;
-        }
-
-        .postInformation img {
-            width: 25px; 
-            height: 25px;
-        }
-
-        a {
-            color: #666;
-            text-decoration: none;
-            font-style: none;
-        }
-
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            margin-bottom: 10px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/light-mode css/light-mode phoneview.css" type="text/css">
+    <script src="js/responsive-redirect.js"></script>
+    <script src="js/phoneDashboard.js"></script>
 </head>
 <body>
     <nav>
@@ -104,10 +16,10 @@
     </nav>
     <div class="main">
         <div class="icons">
-            <a href=""><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></a>
-            <a href=""><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></a>
-            <a href=""><img src="Icons/Black Navbar Icons/theme.svg" alt="Theme icon" class="theme-icon"></a>
-            <a href=""><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" class="theme-icon"></a>
+            <a href="dashboard.html"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></a>
+            <a href="profile.html"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></a>
+            <a href="#" onclick="toggleTheme()"><img src="Icons/Black Navbar Icons/theme.svg" alt="Theme icon" class="theme-icon"></a>
+            <a href="login.html"><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" class="theme-icon"></a>
         </div>
         <div class="posts">
             <div class="post">
@@ -117,7 +29,7 @@
                     <div class="postUsername">
                         <span>Cservenák Dániel</span>
                     </div>
-                    <div class="more-icon" style="margin-left: auto;">
+                    <div class="more-icon">
                         <img src="Icons/Black Navbar Icons/more.svg" alt="">
                     </div>
                 </div>
@@ -135,7 +47,34 @@
                         <span>200</span>
                     </div>
                 </div>
-                <button style="color: #666; margin-top: 10px; border: none; background: transparent;"><a href="commentstest.html">View Comments</a></button>
+                <button><a href="commentstest.html">View Comments</a></button>
+            </div>
+            <div class="post">
+                <div class="Head">
+                    <div class="pfp">
+                    </div>
+                    <div class="postUsername">
+                        <span>Cservenák Dániel</span>
+                    </div>
+                    <div class="more-icon">
+                        <img src="Icons/Black Navbar Icons/more.svg" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dolorum delectus repellat porro, autem sit, mollitia reiciendis, possimus at dolores magni est blanditiis ex. Pariatur sed cupiditate cum sequi nisi?</span>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat soluta non distinctio deserunt temporibus, minima cumque voluptas consequatur ipsa autem, recusandae, provident quasi ratione consectetur aliquid cum maxime! Cumque, quaerat!</span>
+                </div>
+                <div class="postInformation">
+                    <div class="like">
+                        <img src="Icons/Black Navbar Icons/favorite.svg" alt="">
+                        <span>200</span>
+                    </div>
+                    <div class="comment">
+                        <img src="Icons/Black Navbar Icons/comment.svg" alt="">
+                        <span>200</span>
+                    </div>
+                </div>
+                <button>View Comments</a></button>
             </div>
             <div class="post">
                 <div class="Head">
@@ -162,34 +101,7 @@
                         <span>200</span>
                     </div>
                 </div>
-                <button style="color: #666; margin-top: 10px; border: none; background: transparent;"><a href="commentstest.html">View Comments</a></button>
-            </div>
-            <div class="post">
-                <div class="Head">
-                    <div class="pfp">
-                    </div>
-                    <div class="postUsername">
-                        <span>Cservenák Dániel</span>
-                    </div>
-                    <div class="more-icon" style="margin-left: auto;">
-                        <img src="Icons/Black Navbar Icons/more.svg" alt="">
-                    </div>
-                </div>
-                <div class="text">
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dolorum delectus repellat porro, autem sit, mollitia reiciendis, possimus at dolores magni est blanditiis ex. Pariatur sed cupiditate cum sequi nisi?</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat soluta non distinctio deserunt temporibus, minima cumque voluptas consequatur ipsa autem, recusandae, provident quasi ratione consectetur aliquid cum maxime! Cumque, quaerat!</span>
-                </div>
-                <div class="postInformation">
-                    <div class="like">
-                        <img src="Icons/Black Navbar Icons/favorite.svg" alt="">
-                        <span>200</span>
-                    </div>
-                    <div class="comment">
-                        <img src="Icons/Black Navbar Icons/comment.svg" alt="">
-                        <span>200</span>
-                    </div>
-                </div>
-                <button style="color: #666; margin-top: 10px; border: none; background: transparent;"><a href="commentstest.html">View Comments</a></button>
+                <button><a href="commentstest.html">View Comments</a></button>
             </div>
         </div>
     </div>
