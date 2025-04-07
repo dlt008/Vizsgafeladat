@@ -1,23 +1,3 @@
-function updateTooltip() {
-    const themeToggle = document.querySelector('span[data-tooltip][onclick*="toggleTheme"]');
-    
-    if (themeToggle) {
-        themeToggle.setAttribute('data-tooltip', isDarkMode ? 'Light Mode' : 'Dark Mode');
-
-        if (typeof refreshTooltips === 'function') {
-            refreshTooltips();
-        }
-    }
-}
-function cssToggle() {
-    const theme = document.getElementById('theme');
-    if (theme.getAttribute('href').includes('light-mode')) {
-        theme.setAttribute('href', 'css/dark-mode css/dark-mode home.css');
-    } else {
-        theme.setAttribute('href', 'css/light-mode css/light-mode home.css');
-    }
-}
-
 let isDarkMode = false;
 
 function toggleTheme() {
@@ -42,3 +22,25 @@ function updateIcons() {
     });
 }
 
+function updateTooltip() {
+    const themeToggle = document.querySelector('span[data-tooltip][onclick*="toggleTheme"]');
+    
+    if (themeToggle) {
+        themeToggle.setAttribute('data-tooltip', isDarkMode ? 'Light Mode' : 'Dark Mode');
+
+        if (typeof refreshTooltips === 'function') {
+            refreshTooltips();
+        }
+    }
+}
+
+function cssToggle() {
+    const theme = document.getElementById('theme-home');
+    const currentHref = theme.getAttribute('href') || '';
+    
+    if (currentHref.includes('light-mode')) {
+        theme.setAttribute('href', 'css/dark-mode css/dark-mode home.css');
+    } else {
+        theme.setAttribute('href', 'css/light-mode css/light-mode home.css');
+    }
+}
