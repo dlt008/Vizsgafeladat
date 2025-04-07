@@ -245,7 +245,12 @@ nav {
   flex-wrap: wrap;
   height: 50px;
   background-color: white;
-  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1) !important; 
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1;
+}
+
+nav.search-active {
+  box-shadow: none !important;
 }
 
 nav .left-icons {
@@ -258,11 +263,12 @@ nav .left-icons {
 .main {
   grid-area: main;
   background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, margin-top 0.3s ease;
   padding: 20px 0px 20px 0px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 0;
 }
 
 .left-icons .material-symbols-outlined {
@@ -391,17 +397,6 @@ nav .left-icons {
     line-height: 1.5;
     color: black;
     font-size: 0.95em;
-}
-
-.mentions {
-    margin: 15px 0;
-    color: black;
-    font-size: 0.9em;
-}
-
-.mentions span {
-    word-spacing: 8px;
-    color: purple
 }
 
 .Comments {
@@ -1009,83 +1004,4 @@ a {
   text-decoration: none;
   font-style: none;
   color: #666;
-}
-
-/* Default styles for containers */
-#largerContainer {
-  display: block;
-}
-
-#phoneContainer {
-  display: none;
-}
-
-/* Media query for desktop/laptop screens */
-@media screen and (min-width: 601px) {
-  #largerContainer {
-    display: block;
-  }
-
-  #phoneContainer {
-    display: none;
-  }
-}
-
-/* Media query for mobile screens */
-@media screen and (max-width: 1160px) {
-  body {
-    width: 100%;
-    background-color: #f0f0f0;
-  }
-  .main {
-    padding: 15px;
-  }
-  .PostDiv {
-    display: grid;
-    grid-template-columns: auto;
-  }
-  #navSpan {
-    display: none;
-  }
-  nav {
-    width: 100%;
-  }
-  nav .left-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  .userFeed {
-    display: none;
-  }
-  .Posts {
-    width: 100%;
-    height: 100%;
-  }
-  .postText {
-    text-align: justify;
-  }
-}
-
-.searchIcon {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .searchIcon {
-    display: inline-block;
-    margin: 0 8px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .searchIcon {
-    display: inline-block;
-    margin: 0 6px;
-  }
-}
-
-.recentSpan {
-  margin-top: 20px;
 }
