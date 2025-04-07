@@ -245,7 +245,7 @@ nav {
   flex-wrap: wrap;
   height: 50px;
   background-color: white;
-  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1) !important; 
 }
 
 nav .left-icons {
@@ -1045,4 +1045,8 @@ a {
 
 .searchIcon {
    display: none;
+}
+
+.recentSpan {
+  margin-top: 20px;
 }

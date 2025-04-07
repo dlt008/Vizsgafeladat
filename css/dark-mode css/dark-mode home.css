@@ -535,15 +535,22 @@ nav .left-icons {
   box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
+.searchBar button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0e;
+}
+
 .input {
   font-size: 17px;
-  color: rgb(192, 192, 192);
   border: none;
   border-top-left-radius: .5em;
   border-bottom-left-radius: .5em;
   padding: 8px; /* Add padding for better spacing */
   box-sizing: border-box; /* Include padding in the element's total width */
   width: calc(100% - 50px); /* Adjust width to account for the button */
+  color: rgb(192, 192, 192)
 }
 
 .button {
@@ -551,17 +558,11 @@ nav .left-icons {
   text-decoration: none;
   padding: 8px 15px; /* Adjust padding for better spacing */
   font-size: 17px;
-  color: black;
   border-top-right-radius: .5em;
   border-bottom-right-radius: .5em;
   cursor: pointer;
   box-sizing: border-box; /* Include padding in the element's total width */
   width: 50px; /* Fixed width for the button */
-  background-color: rgb(20, 20, 20);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
 }
 
 .input:focus {
@@ -628,7 +629,7 @@ nav .left-icons {
 
 .userFeed hr {
   all: unset; 
-  background-color: rgba(0, 0, 0, 0.05); 
+  background-color: rgba(255, 255, 255, 0.05); 
   width: calc(100% + 40px); 
   height: 1px; 
   margin: 20px -20px;
@@ -968,4 +969,8 @@ a {
 
 .searchIcon {
    display: none;
+}
+
+.recentSpan {
+  margin-top: 20px;
 }
