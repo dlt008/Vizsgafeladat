@@ -14,7 +14,7 @@
         <div class="left-icons">
             <a href="dashboard.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></span></a>
             <a href="profile.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></span></a>
-            <h1>EchoMap</h1>
+            <h1 id="navSpan">EchoMap</h1>
             <a class="link-size searchIcon"><span class="material-symbols-outlined" data-tooltip="Search"><img src="Icons/Black Navbar Icons/search.svg" alt="Search icon" class="theme-icon"></span></a>
             <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="toggleTheme()">
                 <img src="Icons/Black Navbar Icons/theme.svg" alt="Theme Toggle" class="theme-icon">
@@ -23,7 +23,6 @@
         </div>
     </nav> 
     <div class="main">
-        <div id="largerContainer">
             <div class="PostDiv">
                 <!-- A felhasználó "feed" divje -->
                 <div class="userFeed">
@@ -133,9 +132,62 @@
 
                         <button class="comments-toggle"><a href="commentstest.html">View Comments</a></button>
                     </div>
+                    <div class="Post">
+                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
+                        <div class="userPostInfo">
+                            <!-- Felhasználói profilkép -->
+                            <div class="profilePicture"></div>
+                            <!-- Felhasználónév -->
+                            <div class="usernames">
+                                <span class="birthName">@WhySoSerious</span>
+                                <span class="username">oogabooga</span>
+                            </div>
+                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
+                            <span class="material-symbols-outlined more-icon">
+                                <img src="Icons/Black Navbar Icons/more.svg" alt="More icon" class="theme-icon">
+                            </span>
+                        </div>
+
+                        <!-- Poszt szövege -->
+                        <div class="postText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
+                        </div>
+
+                        <!-- Információ a posztról -->
+                        <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
+                            <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                                
+                                <!-- From Uiverse.io by Tsiangana --> 
+                                <label class="ui-bookmark">
+                                    <input type="checkbox" />
+                                    <div class="bookmark">
+                                    <svg
+                                        viewBox="0 0 16 16"
+                                        style="margin-top:4px"
+                                        class="bi bi-heart-fill"
+                                        height="25"
+                                        width="25"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                                        fill-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                    </div>
+                                </label>
+
+                                <span>-count-</span>
+                            </div>
+                            <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
+                                <img src="Icons/Black Navbar Icons/forum.svg " alt="" class="theme-icon">
+                                <span>-count-</span>
+                            </div>
+                        </div>
+
+                        <button class="comments-toggle"><a href="commentstest.html">View Comments</a></button>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 </body>
 </html>

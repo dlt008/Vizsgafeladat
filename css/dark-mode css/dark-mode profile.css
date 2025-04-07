@@ -340,7 +340,7 @@ nav .left-icons {
 .postPfp {
     border-radius: 100%;
     overflow: hidden; /* A divből való "kifolyás" letiltása */
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     width: 65px; 
     height: 65px; 
     background-size: cover; 
@@ -735,7 +735,7 @@ nav .left-icons {
   background-image: url('../../jonkler.webp');
   border-radius: 100%;
   overflow: hidden; /* A divből való "kifolyás" blokkolása */
-  border: 2px solid black;
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .usernames {
@@ -902,7 +902,7 @@ nav .left-icons {
   width: 40px; 
   height: 40px; 
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .Recommended {
