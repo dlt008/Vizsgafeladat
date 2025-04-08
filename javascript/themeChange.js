@@ -25,7 +25,6 @@ function updateIcons() {
         const currentSrc = icon.src.split("/").pop();
         const newIcon = isDarkMode ? `imgs/white/${currentSrc}` : `imgs/black/${currentSrc}`;
         icon.src = newIcon;
-        console.log(`Changing icon from: ${icon.src} to: ${newIcon}`);
     });
 }
 
@@ -46,8 +45,8 @@ function cssToggle() {
             darkSCSS = "css/dark/phone-dashboard.css";
             break;
         case path.includes("comment.html"):
-            lightCSS = "css/light/comment.css";
-            darkCSS = "css/dark/comment.css";
+            lightCSS = "css/light/comments.css";
+            darkCSS = "css/dark/comments.css";
             break;
         case path.includes("profile.html"):
             lightCSS = "css/light/profile.css";
@@ -65,7 +64,6 @@ function cssToggle() {
     newTheme.href = newHref;
 
     theme.replaceWith(newTheme);
-    console.log("Applied CSS:", newHref);
 }
 
 
