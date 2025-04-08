@@ -7,17 +7,17 @@
   }
   
   #SearchDiv {
-      display: none;
-      position: relative;
-      width: 100%;
-      padding: 10px;
-      box-shadow: 0 10px 15px 0 15px rgba(0, 0, 0, 0.1) !important;
-      background: white;
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-  }
-  
+    display: none;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 10px 15px 0 15px rgba(0, 0, 0, 0.1) !important;
+    background: white;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
   #SearchDiv.active {
       display: flex;
   }
@@ -26,7 +26,6 @@
   @media screen and (max-width: 1160px) {
     body {
       width: 100%;
-      background-color: #f0f0f0;
     }
     .main {
       padding: 15px;
@@ -59,9 +58,9 @@
       background-color: transparent;
     }
     .Post {
-      padding: 10px;
-      background-color: rgb(226, 226, 226);
+      padding: 20px;
       box-shadow: none;
+      background-color: #1d1d1d;
     }
     .profilePicture {
       border-radius: 50%;
@@ -82,6 +81,10 @@
   
     .SearchDiv.active {
       display: none;
+    }
+  
+    ::placeholder {
+      color: black;
     }
   
     .navSearchBar {
@@ -134,6 +137,12 @@
           display: none;
       }
       #SearchDiv {
+        display: none;
+        visibility: collapse;
+        margin: 0;
+        padding: 0;
+      }
+      .navSearchBar {
         display: none;
       }
   }

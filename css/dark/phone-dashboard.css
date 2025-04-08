@@ -25,7 +25,7 @@
   @media screen and (max-width: 1160px) {
     body {
       width: 100%;
-      background-color: #f0f0f0;
+      background-color: #191919;
     }
     .main {
       padding: 15px;
@@ -54,6 +54,9 @@
     .Posts {
       width: 100%;
       height: 100%;
+    }
+    .Post {
+      background-color: #191919 !important;
     }
     .postText {
       text-align: justify;
