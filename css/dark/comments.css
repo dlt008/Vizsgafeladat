@@ -673,6 +673,11 @@ gap: 5px
   .underComments {
     background-color: transparent;
   }
+
+  hr {
+    background-color: white;
+  }
+
 }
 
 @media screen and (max-width: 1160px) {
