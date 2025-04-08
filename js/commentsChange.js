@@ -41,4 +41,3 @@ function updateIcons() {
         icon.src = newPath;
     });
 }
-

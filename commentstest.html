@@ -6,23 +6,30 @@
     <link rel="stylesheet" href="css/light-mode css/light-mode comment.css" id="theme">
     <link rel="shortcut icon" href="output-onlinepngtools.png" type="image/x-icon">
     <script src="js/commentsChange.js"></script>
+    <script src="js/searchOpen.js"></script>
     <title>Comment</title>
 </head>
 <body>
-    <div class="top-left"></div>
-    <div class="top">
-        <h1>EchoMap</h1>
-    </div>
-    <div class="left">
+    <nav>
         <div class="left-icons">
-            <a href="dashboard.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></span></a>
-            <a href="profile.html" target="_blank" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></span></a>
+            <a href="dashboard.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="Icons/Black Navbar Icons/home.svg" alt="Home icon" class="theme-icon"></span></a>
+            <a href="profile.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="Icons/Black Navbar Icons/person.svg" alt="Person icon" class="theme-icon"></span></a>
+            <h1 id="navSpan">EchoMap</h1>
+            <a class="link-size searchIcon"><span class="material-symbols-outlined" data-tooltip="Search" onclick="searchOpenBttn()"><img src="Icons/Black Navbar Icons/search.svg" alt="Search icon" class="theme-icon"></span></a>
             <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="toggleTheme()">
                 <img src="Icons/Black Navbar Icons/theme.svg" alt="Theme Toggle" class="theme-icon">
             </span>
             <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="Icons/Black Navbar Icons/logout.svg" alt="Logout icon" class="theme-icon"></span>
         </div>
-    </div>
+    </nav>
+    <div id="SearchDiv">
+        <div class="navSearchBar">
+            <input placeholder="Search..." class="input" name="text" type="text">
+            <button class="button">
+                <img src="Icons/Black Navbar Icons/search.svg" alt="Search" class="theme-icon">
+            </button>
+        </div> 
+    </div>  
     <div class="main">
         <div class="main-container">
             <div class="userPosts">
