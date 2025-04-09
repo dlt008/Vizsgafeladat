@@ -40,9 +40,7 @@ function cssToggle() {
     switch (true) {
         case path.includes("dashboard.html"):
             lightCSS = "css/light/dashboard.css";
-            lightSCSS = "css/light/phone-dashboard.css"
             darkCSS = "css/dark/dashboard.css";
-            darkSCSS = "css/dark/phone-dashboard.css";
             break;
         case path.includes("comment.html"):
             lightCSS = "css/light/comments.css";
