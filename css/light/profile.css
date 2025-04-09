@@ -1066,6 +1066,7 @@ nav .left-icons {
   }
   .segitseg {
     width: 100%;
+    padding: 0px;
   }
   .userProfile {
     padding: 15px;
@@ -1090,8 +1091,16 @@ nav .left-icons {
   .backgroundImage {
     margin-bottom: 50px;
   }
-  .segitseg hr {
+  #largeScreenHr {
     display: none;
+  }
+  #smallScreenHr {
+    border: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 1px;
   }
   #navSpan {
     display: none;
@@ -1211,6 +1220,9 @@ nav .left-icons {
     display: none;
   }
   .insideProfilePicture {
+    display: none;
+  }
+  #smallScreenHr {
     display: none;
   }
 }
