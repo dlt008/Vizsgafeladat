@@ -213,7 +213,6 @@
   
 input[type=text]{
     background-color: rgb(24, 24, 24);
-    background-image: url();
     background-position: 10px 10px; 
     background-repeat: no-repeat;
 }
@@ -664,7 +663,7 @@ nav .left-icons {
 }
 
 .userProfilePicture {
-  background-image: url('../../jonkler.webp'); 
+  background-image: url('../../imgs/jonkler.webp');    
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -711,7 +710,7 @@ nav .left-icons {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-image: url('../../jonkler.webp');
+  background-image: url('../../imgs/jonkler.webp');    
   border-radius: 100%;
   overflow: hidden; /* A divből való "kifolyás" blokkolása */
   border: 2px solid rgb(192, 192, 192);
@@ -873,7 +872,7 @@ nav .left-icons {
 }
 
 .recentPostPfp {
-  background-image: url('../../jonkler.webp'); 
+  background-image: url('../../imgs/jonkler.webp');    
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 

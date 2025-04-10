@@ -213,7 +213,6 @@
   
 input[type=text]{
     background-color: white;
-    background-image: url();
     background-position: 10px 10px; 
     background-repeat: no-repeat;
 }
@@ -347,7 +346,7 @@ nav .left-icons {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-image: url('../../jonkler.webp');
+    background-image: url('../../imgs/jonkler.webp');
 }
 
 .postUsername {
@@ -629,7 +628,7 @@ nav .left-icons {
   z-index: 2;
   grid-row: 2/4;
   grid-column: 4/6;
-  background-image: url('../../jonkler.webp');
+  background-image: url('../../imgs/jonkler.webp');  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -705,7 +704,7 @@ nav .left-icons {
 }
 
 .userProfilePicture {
-  background-image: url('../../jonkler.webp'); 
+  background-image: url('../../imgs/jonkler.webp');  
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -758,7 +757,7 @@ nav .left-icons {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-image: url('../../jonkler.webp');
+  background-image: url('../../imgs/jonkler.webp');  
   border-radius: 100%;
   overflow: hidden; /* A divből való "kifolyás" blokkolása */
   border: 2px solid black;
@@ -921,7 +920,7 @@ nav .left-icons {
 }
 
 .recentPostPfp {
-  background-image: url('../../jonkler.webp'); 
+  background-image: url('../../imgs/jonkler.webp');  
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -1075,7 +1074,7 @@ nav .left-icons {
     display: none;
   }
   .insideProfilePicture {
-    background-image: url('../../imgs/jonkler.webp');
+    background-image: url('../../imgs/jonkler.webp');    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1201,6 +1200,10 @@ nav .left-icons {
   .searchIcon {
       display: block;
   }
+  #smallScreenHr {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media screen and (min-width: 1161px) {
@@ -1216,7 +1219,7 @@ nav .left-icons {
   .navSearchBar {
     display: none;
   }
-  .middleInformation {
+  .userStatistics {
     display: none;
   }
   .insideProfilePicture {
@@ -1224,5 +1227,9 @@ nav .left-icons {
   }
   #smallScreenHr {
     display: none;
+    visibility: hidden;
+  }
+  .middleInformation {
+    transform: translateY(-90px);
   }
 }
