@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
     <link rel="stylesheet" href="css/light/profile.css" type="text/css" id="theme">
-    <link rel="icon" type="image/x-icon" href="output-onlinepngtools.png">
-    <script src="js/responsive.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.png">
     <script src="javascript/themeChange.js"></script>
-    <script src="js/text-area.js"></script>
+    <script src="javascript/searchOpen.js"></script>
 </head>
 <body>
     <nav>
-        <div class="left-icons">
+        <div class="nav-icons">
             <a href="dashboard.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="imgs/black/home.svg" alt="Home icon" class="theme-icon"></span></a>
             <a href="profile.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="imgs/black/person.svg" alt="Person icon" class="theme-icon"></span></a>
             <h1 id="navSpan">EchoMap</h1>
@@ -23,10 +22,71 @@
             <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="imgs/black/logout.svg" alt="Logout icon" class="theme-icon"></span>
         </div>
     </nav>
+    <div id="SearchDiv">
+        <div class="navSearchBar">
+            <input placeholder="Search..." class="input" name="text" type="text">
+            <button class="button">
+                <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
+            </button>
+        </div> 
+    </div>  
     <div class="main">
-        <div class="profileInformation">
-            <div class="segitseg">
+        <div class="main-container">
+            <div class="userFeed">
+                <div class="searchBar">
+                    <input placeholder="Search..." class="input" name="text" type="text">
+                    <button class="button">
+                        <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
+                    </button>
+                </div>
+                <hr>
+                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Your progress</span>
+                <div class="progressBar">
+                    <div class="userProgress"><span>20%</span></div>
+                </div>
+                <div class="toDoList">
+                    <ul">
+                        <li>Follow someone</li>
+                        <li>Post your first idea</li>
+                        <li>Like an idea</li>
+                        <li>Comment on an idea</li>
+                        <li style="text-decoration: line-through;">Set a banner</li>
+                    </ul>
+                </div>
+                <hr>
+                <span class="header">Who to follow</span>
+                <div class="Recommended">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button>Follow</button>
+                    </div>
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button>Follow</button>
+                    </div>
+                </div>
+                <span class="header" id="recentPostHeader">Recent posts by followed users</span>
 
+                <div class="recentPosts">
+                    <div class="user">
+                        <div class="recentPostPfp"></div>
+                        <div class="usernames">
+                            <p>@Username</p>
+                            <span style="font-size: 15px;">Username</span>
+                        </div>
+                        <button>View</button>
+                    </div>
+                </div>
+        </div>
+            <div class="segitseg">
                 <div class="userProfile">
                     <div class="backgroundImage">
                         <div class="insideProfilePicture">
@@ -64,29 +124,24 @@
 
                 <hr id="smallScreenHr">
 
-                <div class="Post" style="margin-top: 10px;">
+                <div class="Post">
                     <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                    <div class="Head">
+                    <div class="userPostInfo">
                         <!-- Felhasználói profilkép -->
-                        <div class="postPfp"></div>
+                        <div class="profilePicture"></div>
                         <!-- Felhasználónév -->
-                        <div class="postUsername">
-                            <span>@WhySoSerious</span>
-                            <span style="font-size: 15px;">oogabooga</span>
+                        <div class="usernames">
+                            <span class="birthName">@WhySoSerious</span>
+                            <span class="username">oogabooga</span>
                         </div>
                         <!-- More button ami "report"/"save" buttonokat tartalmazza -->
-                        <span class="material-symbols-outlined more-icon" class="postOptions">
-                            <img src="imgs/black/more.svg" alt="More icon" class="theme-icon postOptions">
+                        <span class="material-symbols-outlined more-icon">
+                            <img src="imgs/black/more.svg" alt="More icon" class="theme-icon">
                         </span>
                     </div>
 
-                    <!-- Poszt szövege (user által írt) -->
-                    <div class="text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptates, aperiam, neque nisi dolores aut deleniti esse iure illo temporibus accusantium ex hic quidem inventore perferendis quaerat optio corrupti ab!
-                        Soluta tempore necessitatibus eligendi voluptate, praesentium ratione adipisci quod sit quam ab repellendus nulla quas at neque beatae. Quae quis provident aliquam, beatae qui voluptatem repellat corporis maiores commodi nulla.
-                        Ad eos rerum debitis aliquid quidem nisi repudiandae architecto mollitia soluta, numquam cumque deserunt eius repellat voluptates illum porro pariatur corrupti modi recusandae sint eum ex aperiam ipsum! Dolorum, ut.
-                        Eius nostrum enim impedit, quos soluta quasi eveniet, possimus nihil officiis, quisquam quia assumenda molestias saepe totam explicabo deleniti dolorum consequuntur quaerat adipisci delectus! Cumque voluptas quis tempora aperiam vero?
-                        Assumenda neque consectetur suscipit dolorem eaque ducimus tempora delectus voluptas, ipsam sunt deleniti expedita a officiis cum consequuntur! Laboriosam voluptate velit est rerum dicta, maiores nesciunt mollitia! Officia, facere ipsam.
+                    <div class="postText">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
                     </div>
 
                     <!-- Információ a posztról -->
@@ -103,8 +158,7 @@
                                 class="bi bi-heart-fill"
                                 height="25"
                                 width="25"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                 d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
                                 fill-rule="evenodd"
@@ -119,84 +173,10 @@
                             <span>999</span>
                         </div>
                     </div>
-
-                    <div class="commentSection">
-                        <button class="comments-toggle"><span>View Comments</span></button>
-                        <div class="Comments">
-                            <div class="comment-wrapper">
-                                <div class="text-editor">
-                                    <div class="editor-content" contenteditable="true" placeholder="Write a comment..."></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="comments-toggle"><a href="comment.html">View Comments</a></button>
                 </div>
             </div>
-            <div class="userFeed">
-                
-                <div class="searchBar">
-                    <input placeholder="Search..." class="input" name="text" type="text">
-                    <button class="button">
-                        <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
-                    </button>
-                </div>
-
-                <hr>
-
-                <span style="margin-left: auto; margin-right: auto; font-size: 20px; margin-bottom: 20px;">Your progress</span>
-
-                <div class="progressBar">
-                    <div class="userProgress"><span>20%</span></div>
-                </div>
-
-                <div class="toDoList">
-                    <ul">
-                        <li>Follow someone</li>
-                        <li>Post your first idea</li>
-                        <li>Like an idea</li>
-                        <li>Comment on an idea</li>
-                        <li style="text-decoration: line-through;">Set a banner</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <span class="header">Who to follow</span>
-
-                <div class="Recommended">
-                    <div class="user">
-                        <div class="recentPostPfp"></div>
-                        <div class="usernames">
-                            <p>@Username</p>
-                            <span style="font-size: 15px;">Username</span>
-                        </div>
-                        <button>Follow</button>
-                    </div>
-                
-                    <div class="user">
-                        <div class="recentPostPfp"></div>
-                        <div class="usernames">
-                            <p>@Username</p>
-                            <span style="font-size: 15px;">Username</span>
-                        </div>
-                        <button>Follow</button>
-                    </div>
-                </div>
-
-                <span class="header" id="recentPostHeader">Recent posts by followed users</span>
-
-                <div class="recentPosts">
-                    <div class="user">
-                        <div class="recentPostPfp"></div>
-                        <div class="usernames">
-                            <p>@Username</p>
-                            <span style="font-size: 15px;">Username</span>
-                        </div>
-                        <button>View</button>
-                    </div>
-                </div>
         </div>
     </div>
-    <script src="js/profileChange.js"></script>
 </body>
 </html>

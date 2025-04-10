@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed</title>
     <link rel="stylesheet" href="css/light/dashboard.css" type="text/css" id="theme">
-    <link rel="shortcut icon" href="output-onlinepngtools.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/universal.css">
+    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.png">
     <script src="javascript/themeChange.js"></script>
     <script src="javascript/searchOpen.js"></script>
 </head>
 <body>
+
     <nav>
-        <div class="left-icons">
+        <div class="nav-icons">
             <a href="dashboard.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="imgs/black/home.svg" alt="Home icon" class="theme-icon"></span></a>
             <a href="profile.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="imgs/black/person.svg" alt="Person icon" class="theme-icon"></span></a>
             <h1 id="navSpan">EchoMap</h1>
@@ -22,6 +24,7 @@
             <span class="material-symbols-outlined" data-tooltip="Logout" class="link-size"><img src="imgs/black/logout.svg" alt="Logout icon" class="theme-icon"></span>
         </div>
     </nav>
+
     <div id="SearchDiv">
         <div class="navSearchBar">
             <input placeholder="Search..." class="input" name="text" type="text">
@@ -30,86 +33,89 @@
             </button>
         </div> 
     </div>  
-    <div class="main">
-            <div class="PostDiv">
-                <!-- A felhasználó "feed" divje -->
-                <div class="userFeed">
 
-                    <!-- Keresősáv a felhasználók részére -->
+    <div class="main">
+            <div class="main-container">
+                <div class="userFeed">
                     <div class="searchBar">
                         <input placeholder="Search..." class="input" name="text" type="text">
                         <button class="button">
                             <img src="imgs/black/search.svg" alt="Search" class="theme-icon">
                         </button>
-                    </div>                
-
-                    <!-- Vízszintes sáv a jobb láthatóság miatt, illetve "Who to follow" fejléc stílusbeállítsai-->
+                    </div>
                     <hr>
-                    <span class="bottomLgMargin header">Who to follow</span>
 
-                    <!-- Felhasználók számára más felhasználók "ajánlási" divje -->
-                    <div class="recommendationDivs">
+                    <span class="header">Your progress</span>
 
-                        <div class="recommendedUser">
-                            <div class="userProfilePicture"></div>
-                            <div class="usernames">
-                                <p>teszt teszt teszt </p>
-                                <span>@WhySoSerious</span>
-                            </div>
-                            <button>Follow</button>
-                        </div>
-                        <div class="recommendedUser">
-                            <div class="userProfilePicture"></div>
-                            <div class="usernames">
-                                <p>Refka Bence</p>
-                                <span>@WhySoSerious</span>
-                            </div>
-                            <button>Follow</button>
-                        </div>
-
+                    <div class="progressBar">
+                        <div class="userProgress"><span>20%</span></div>
                     </div>
 
-                    <!-- A felhasználó által követett felhasználók legfrisebb "kiposztolt" ötletei -->
-                    <span class="header recentSpan">Recent posts by followed users</span>
+                    <div class="toDoList">
+                        <ul">
+                            <li>Set a profile picture</li>
+                            <li>Set a banner</li>
+                            <li>Like an idea</li>
+                            <li>Comment on an idea</li>
+                            <li>Post your first idea</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    
+                    <span class="header">Who to follow</span>
 
-                    <div class="recommendationDivs">
-                        <div class="recommendedUser">
-                            <div class="userProfilePicture"></div>
-                            <div class="usernames">
+                    <div class="feedDiv" id="recommendations">
+
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
                                 <p>@Username</p>
-                                <span>Username</span>
+                            </div>
+                            <button>Follow</button>
+                        </div>
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
+                                <p>@Username</p>
+                            </div>
+                            <button>Follow</button>
+                        </div>
+                    </div>
+
+                    <span class="header recentHeader">Recent posts by followed users</span>
+    
+                    <div class="feedDiv" id="recentposts">
+
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
+                                <p>@Username</p>
                             </div>
                             <button>View</button>
-                        </div>    
+                        </div>
                     </div>
+
                 </div>
-
-                <!-- Main diven belüli középső div (posztok) -->
-                <div class="Posts">
-                    <div class="Post">
-                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                        <div class="userPostInfo">
-                            <!-- Felhasználói profilkép -->
-                            <div class="profilePicture"></div>
-                            <!-- Felhasználónév -->
-                            <div class="usernames">
+                <div class="posts">
+                    <div class="post">
+                        <div class="postInfo">
+                            <div class="postPicture"></div>
+                            <div class="postData">
                                 <span class="birthName">@WhySoSerious</span>
-                                <span class="username">oogabooga</span>
+                                <span class="time">20 hours ago</span>
                             </div>
-                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
                             <span class="material-symbols-outlined more-icon">
                                 <img src="imgs/black/more.svg" alt="More icon" class="theme-icon">
                             </span>
                         </div>
 
-                        <!-- Poszt szövege -->
                         <div class="postText">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
                         </div>
 
                         <!-- Információ a posztról -->
-                        <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
-                            <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                        <div class="postInformation">
+                            <div class="likeInformation">
                                 
                                 <!-- From Uiverse.io by Tsiangana --> 
                                 <label class="ui-bookmark">
@@ -129,41 +135,32 @@
                                     </svg>
                                     </div>
                                 </label>
-
-                                <span>-count-</span>
+                                <span>648</span>
                             </div>
-                            <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
-                                <img src="imgs/black/forum.svg" alt="" class="theme-icon">
-                                <span>-count-</span>
+                            <div class="commentInformation">
+                                <img src="imgs/black/comment.svg" alt="" class="theme-icon">
+                                <span>999</span>
                             </div>
                         </div>
-
-                        <button class="comments-toggle"><a href="commentstest.html">View Comments</a></button>
+                        <button class="comments-toggle"><a href="comment.html">View Comments</a></button>
                     </div>
-                    <div class="Post">
-                        <!-- Poszt információk (felhasználói profilkép -> felhasználói név -> "report"/"save" button opciók) -->
-                        <div class="userPostInfo">
-                            <!-- Felhasználói profilkép -->
-                            <div class="profilePicture"></div>
-                            <!-- Felhasználónév -->
-                            <div class="usernames">
+
+                    <div class="post">
+                        <div class="postInfo">
+                            <div class="postPicture"></div>
+                            <div class="postData">
                                 <span class="birthName">@WhySoSerious</span>
-                                <span class="username">oogabooga</span>
+                                <span class="time">20 hours ago</span>
                             </div>
-                            <!-- More button ami "report"/"save" buttonokat tartalmazza -->
                             <span class="material-symbols-outlined more-icon">
                                 <img src="imgs/black/more.svg" alt="More icon" class="theme-icon">
                             </span>
                         </div>
-
-                        <!-- Poszt szövege -->
                         <div class="postText">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nam illo minima, ut aut molestias quidem illum itaque? Aliquam repellendus inventore obcaecati nobis, odio deleniti itaque soluta distinctio dolores laboriosam?
                         </div>
-
-                        <!-- Információ a posztról -->
-                        <div class="postInformation" style="margin-top: 15px; text-align: justify; display: flex; flex-wrap: nowrap; flex-direction: row; gap: 10px">
-                            <div class="likeInformation" style="display: flex; align-items: center; gap: 5px;">
+                        <div class="postInformation">
+                            <div class="likeInformation">
                                 
                                 <!-- From Uiverse.io by Tsiangana --> 
                                 <label class="ui-bookmark">
@@ -183,16 +180,15 @@
                                     </svg>
                                     </div>
                                 </label>
-
-                                <span>-count-</span>
+                                <span>648</span>
                             </div>
-                            <div class="commentInformation" style="display: flex; align-items: center; gap: 5px;">
-                                <img src="imgs/black/forum.svg" alt="" class="theme-icon">
-                                <span>-count-</span>
+                            <div class="commentInformation">
+                                <img src="imgs/black/comment.svg" alt="" class="theme-icon">
+                                <span>999</span>
                             </div>
                         </div>
 
-                        <button class="comments-toggle"><a href="commentstest.html">View Comments</a></button>
+                        <button class="comments-toggle"><a href="comment.html">View Comments</a></button>
                     </div>
                 </div>
             </div>

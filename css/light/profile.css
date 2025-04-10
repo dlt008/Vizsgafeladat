@@ -242,14 +242,14 @@ nav {
   box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1) !important; 
 }
 
-nav .left-icons {
+nav .nav-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
 }
 
-.left-icons .material-symbols-outlined {
+.nav-icons .material-symbols-outlined {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +259,7 @@ nav .left-icons {
   overflow: hidden;
 }
 
-.left-icons .material-symbols-outlined:hover {
+.nav-icons .material-symbols-outlined:hover {
   background-color: rgba(0, 0, 0, 0.1);
   width: 50px;
   cursor: pointer;
@@ -590,7 +590,7 @@ nav .left-icons {
     outline: none;
 }
 
-.profileInformation {
+.main-container {
   display: grid;
   grid-template-columns: 840px minmax(290px, auto);
   background-color: rgb(226, 226, 226);
@@ -1111,7 +1111,7 @@ nav .left-icons {
     box-shadow: none;
   }
 
-  nav .left-icons {
+  nav .nav-icons {
     display: flex;
     justify-content: center;
     align-items: center;
