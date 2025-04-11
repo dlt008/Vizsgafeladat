@@ -81,3 +81,29 @@ nav {
 .feedPicture {
   border: 2px solid black;
 }
+
+@media screen and (max-width: 1160px) {
+  #SearchDiv {
+      display: none;
+      position: relative;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 10px 15px 0 15px rgba(0, 0, 0, 0.1) !important;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .post {
+    background-color: rgb(226, 226, 226);
+    box-shadow: none !important;
+  }
+
+  #SearchDiv input {
+    background-color: #f0f0f0;
+  }
+
+  #SearchDiv button {
+    background-color: rgb(226, 226, 226);
+  }
+}

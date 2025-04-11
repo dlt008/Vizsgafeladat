@@ -555,7 +555,6 @@ a {
     width: 100%;
     padding: 10px;
     box-shadow: 0 10px 15px 0 15px rgba(0, 0, 0, 0.1) !important;
-    background: white;
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -601,11 +600,20 @@ a {
         display: none;
     }
 
-    .Posts {
-        width: 100%;
-        height: 100%;
-        padding: 0;
+    .posts {
         background-color: transparent;
+        padding: 0;
+    }
+
+    #SearchDiv {
+        display: none;
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 10px 15px 0 15px rgba(0, 0, 0, 0.1) !important;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
     }
 
     .Post {
@@ -616,7 +624,6 @@ a {
     .userPostInfo {
         gap: 5px;
     }
-
     .postText {
         text-align: justify;
     }
@@ -632,10 +639,6 @@ a {
         display: none;
     }
 
-    ::placeholder {
-        color: black;
-    }
-
     .navSearchBar {
         display: flex;
         justify-content: center;
@@ -646,14 +649,12 @@ a {
 
     .navSearchBar .input {
         font-size: 17px;
-        color: black;
         border: none;
         border-top-left-radius: .5em;
         border-bottom-left-radius: .5em;
         padding: 8px; /* Add padding for better spacing */
         box-sizing: border-box; /* Include padding in the element's total width */
         width: calc(100% - 50px); /* Adjust width to account for the button */
-        background-color: rgb(200, 200, 200, 0.3);
     }
 
     .navSearchBar .button {
@@ -661,7 +662,6 @@ a {
         text-decoration: none;
         padding: 8px 15px; /* Adjust padding for better spacing */
         font-size: 17px;
-        color: black;
         border-top-right-radius: .5em;
         border-bottom-right-radius: .5em;
         cursor: pointer;
@@ -670,7 +670,6 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(175, 175, 175, 0.4);
     }
 }
 
