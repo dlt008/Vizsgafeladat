@@ -15,7 +15,7 @@ input[type=text]{
 
 body {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
@@ -73,12 +73,14 @@ nav .nav-icons {
     align-items: flex-start;
     margin-top: 0;
     transition: background-color 0.3s ease, margin-top 0.3s ease;
+    height: 100%;
 }
 
 .main-container {
     height: 100%;
     display: grid;
     grid-template-columns: 840px minmax(240px, auto);
+    min-height: 100vh;
 }
 
 .posts {
@@ -212,6 +214,7 @@ nav .nav-icons {
     width: calc(100% + 40px); 
     height: 1px; 
     margin: 20px -20px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .rightSideDiv hr {
@@ -931,5 +934,8 @@ a {
     }
     #smallScreenHr {
       display: none;
+    }
+    #navSpan {
+        display: block;
     }
   }

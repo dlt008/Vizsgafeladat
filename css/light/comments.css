@@ -228,6 +228,7 @@ body {
   height: auto;
 }
 
+
 nav {
   display: flex;
   justify-content: center;
@@ -456,11 +457,11 @@ transition: background-color 0.2s;
 }
 
 .underComments .post .username {
-display: flex; 
-flex-wrap: wrap; 
-flex-direction: column;
-justify-content: center;
-gap: 5px
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px
 }
 
 .underComments .post .text {
@@ -685,4 +686,91 @@ gap: 5px
     .navSearchBar {
       display: none;
     }
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  height: 65px;
+}
+
+.postPicture {
+  border-radius: 100%;
+  overflow: hidden; /* A divből való "kifolyás" letiltása */
+  width: 65px; 
+  height: 65px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-image: url('../../imgs/jonkler.webp');
+}
+
+.postData {
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2px; 
+  flex-grow: 1;
+}
+
+.postData .username {
+  font-size: 15px;
+}
+
+.postText {
+  margin: 15px 0;
+  line-height: 1.5;
+  font-size: 0.95em;
+  text-align: justify;
+}
+
+.postInformation button {
+  border: 0;
+  background-color: rgb(192, 192, 192);
+  padding: 7px;
+  border-radius: 15px;
+}
+
+.comments-toggle {
+  all: unset;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.postInformation {
+  margin-top: 15px; 
+  text-align: justify; 
+  display: flex; 
+  flex-wrap: nowrap; 
+  flex-direction: row; 
+  gap: 10px;
+}
+
+.likeInformation {
+  display: flex; 
+  align-items: center; 
+  margin-left: auto;
+  gap: 5px;
+}
+
+.mainHr {
+  border: 0;
+  height: 1px;
+  background-color: black;
 }

@@ -257,6 +257,7 @@ nav .left-icons {
 }
 
 .main {
+  grid-area: main;
   background-color: #191919;
   transition: background-color 0.3s ease;
   padding: 20px 0px 20px 0px;
@@ -278,7 +279,7 @@ nav .left-icons {
 }
 
 .left-icons .material-symbols-outlined:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   width: 50px;
   cursor: pointer;
 }
@@ -293,18 +294,10 @@ nav .left-icons {
   grid-column: 1/2;
 }
 
-.Post {
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
-
 .userFeed  {
   grid-row: 1/6;
   grid-column: 2/3;
-  background-color: #1d1d1d;
+  background-color: rgb(226, 226, 226);
   transition: background-color 0.3s ease;
   padding: 20px;
   display: flex;
@@ -372,7 +365,7 @@ transition: background-color 0.2s;
 }
 
 .more-icon:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .more-icon img {
@@ -383,7 +376,6 @@ transition: background-color 0.2s;
 .postText {
   margin: 15px 0;
   line-height: 1.5;
-  color: black;
   font-size: 0.95em;
   text-align: justify;
 }
@@ -392,16 +384,6 @@ transition: background-color 0.2s;
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.mainComment {
-  background-color: #191919;
-  padding: 20px;
-}
-
-.underComments {
-  padding: 20px;
-  background-color: #191919;
 }
 
 .mainComment .text {
@@ -435,7 +417,7 @@ transition: background-color 0.2s;
 
 .userPosts hr {
   border: none;
-  background-color: rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.2); 
   height: 1px; 
   width: 100%;
   margin: 20px 0px 20px 0px;
@@ -445,11 +427,6 @@ transition: background-color 0.2s;
   float: right;
   margin-right: 2%;
   margin-top: 3px;
-}
-
-.underComments {
-  width: calc(100% - 4%); /* Adjust width to account for margins */
-  margin: 20px 2% 0 2%;
 }
 
 .underComments .post {
@@ -469,16 +446,17 @@ transition: background-color 0.2s;
 }
 
 .underComments .post .username {
-display: flex; 
-flex-wrap: wrap; 
-flex-direction: column;
-justify-content: center;
-gap: 5px
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px
 }
 
 .underComments .post .text {
   margin: 15px 0;
   line-height: 1.5;
+  color: black;
   font-size: 0.95em;
   text-align: justify;
 }
@@ -487,17 +465,31 @@ gap: 5px
   margin-top: 5px;
 }
 
-.underHr {
+.underComments hr {
   border: none;
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(0, 0, 0, 0.2); 
   height: 1px; 
-  width: 50%;
+  width: calc(100% - 4%); /* Adjust width to account for margins */
+  margin: 20px 2% 0 2%;
+}
+
+.userFeed  {
+  grid-row: 1/6;
+  grid-column: 2/3;
+  background-color: #1d1d1d;
+  transition: background-color 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .main-container {
   height: 100%;
   display: grid;
   grid-template-columns: 840px minmax(240px, auto);
+
 }
 
 /* From Uiverse.io by deepak16375 */ 
@@ -511,13 +503,14 @@ gap: 5px
 
 .input {
   font-size: 17px;
-  color: black;
+  color: rgb(192, 192, 192);
   border: none;
   border-top-left-radius: .5em;
   border-bottom-left-radius: .5em;
   padding: 8px; /* Add padding for better spacing */
   box-sizing: border-box; /* Include padding in the element's total width */
   width: calc(100% - 50px); /* Adjust width to account for the button */
+  background-color: #3f3f3f;
 }
 
 .button {
@@ -525,7 +518,6 @@ gap: 5px
   text-decoration: none;
   padding: 8px 15px; /* Adjust padding for better spacing */
   font-size: 17px;
-  color: black;
   border-top-right-radius: .5em;
   border-bottom-right-radius: .5em;
   cursor: pointer;
@@ -535,6 +527,7 @@ gap: 5px
   justify-content: center; 
   align-items: center;
   outline: none;
+  background-color: #474747;
 }
 
 .input:focus {
@@ -555,14 +548,25 @@ gap: 5px
     width: 100%;
     padding: 10px;
     box-shadow: 0 10px 15px 0 15px rgba(0, 0, 0, 0.1) !important;
-    background: white;
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    color: rgb(192, 192, 192)
 }
 
 #SearchDiv.active {
     display: flex;
+    background-color: #1d1d1d;
+    color: rgb(192, 192, 192)
+}
+
+#SearchDiv.active input {
+  display: flex;
+  color: rgb(192, 192, 192)
+}
+
+.navSearchBar::placeholder {
+  color: rgb(192, 192, 192) !important
 }
 
 /* Media query for mobile screens */
@@ -574,6 +578,7 @@ gap: 5px
   .main {
     padding: 15px;
     height: 100%;
+    min-height: 100vh;
   }
   .main-container {
     display: grid;
@@ -597,6 +602,7 @@ gap: 5px
   .main-container {
     width: 100%;
     height: 100%;
+    min-height: 100vh;
   }
   .userPosts {
     width: 100%;
@@ -618,7 +624,7 @@ gap: 5px
   }
 
   ::placeholder {
-    color: black;
+    color: rgb(192, 192, 192);
   }
 
   .navSearchBar {
@@ -663,21 +669,6 @@ gap: 5px
   .information {
     gap: 5px;
   }
-  .mainComment {
-    padding: 0px;
-    background-color: transparent;
-  }
-  .underComments {
-    padding: 0px;
-  }
-  .underComments {
-    background-color: transparent;
-  }
-
-  hr {
-    background-color: white;
-  }
-
 }
 
 @media screen and (max-width: 1160px) {
@@ -699,4 +690,92 @@ gap: 5px
     .navSearchBar {
       display: none;
     }
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  height: 65px;
+}
+
+.postPicture {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 65px; 
+  height: 65px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-image: url('../../imgs/jonkler.webp');
+  border: 2px solid rgb(192, 192, 192);
+}
+
+.postData {
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2px; 
+  flex-grow: 1;
+}
+
+.postData .username {
+  font-size: 15px;
+}
+
+.postText {
+  margin: 15px 0;
+  line-height: 1.5;
+  font-size: 0.95em;
+  text-align: justify;
+}
+
+.postInformation button {
+  border: 0;
+  background-color: rgb(192, 192, 192);
+  padding: 7px;
+  border-radius: 15px;
+}
+
+.comments-toggle {
+  all: unset;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.postInformation {
+  margin-top: 15px; 
+  text-align: justify; 
+  display: flex; 
+  flex-wrap: nowrap; 
+  flex-direction: row; 
+  gap: 10px;
+}
+
+.likeInformation {
+  display: flex; 
+  align-items: center; 
+  margin-left: auto;
+  gap: 5px;
+}
+
+.mainHr {
+  border: 0;
+  height: 1px;
+  background-color: black;
 }
