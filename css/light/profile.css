@@ -59,3 +59,10 @@ nav {
     background-color: rgba(0, 0, 0, 0.05);
   }
 }
+
+
+@media screen and (min-width: 1161px) {
+  #navSpan {
+      color: black;
+  }
+}

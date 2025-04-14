@@ -716,10 +716,6 @@ font-size: 15px;
     display: flex;
 }
 
-#navSpan {
-    display: block;
-}
-
 @media screen and (max-width: 1160px) {
     .main {
       padding-top: 15px;
