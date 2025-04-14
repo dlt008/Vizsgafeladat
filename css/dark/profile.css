@@ -51,6 +51,10 @@ nav {
   border: 2px solid rgb(192, 192, 192)
 }
 
+.searchDiv.active {
+  background-color: #1d1d1d;
+}
+
 @media screen and (max-width: 1160px) {
   .insideProfilePicture {
     border: 5px solid #1d1d1d;
@@ -58,5 +62,49 @@ nav {
   #smallScreenHr {
     background-color: rgba(255, 255, 255, 0.05);
   }
-}
+
+  .searchBar.active {
+    display: flex;
+    background-color: #1d1d1d;
+  }
+
+  .searchBar input {
+    background-color: #505050;
+  }
   
+  .searchDiv button {
+    background-color: #575757;
+  }
+
+}
+
+
+#SearchDiv {
+  background-color: #1d1d1d;
+}
+
+.searchBar input,
+.navSearchBar input {
+  color: rgb(192, 192, 192) !important;
+  background-color: rgb(24, 24, 24);
+}
+
+.searchBar input::placeholder,
+.navSearchBar input::placeholder {
+  color: rgb(192, 192, 192) !important;
+  background-color: rgb(24, 24, 24);
+}
+
+.searchBar button,
+.navSearchBar button {
+  background-color: #575757;
+}
+
+#SearchDiv.active input {
+  background-color: rgb(24, 24, 24);
+  color: rgb(192, 192, 192);
+}
+
+#SearchDiv button {
+  background-color: #575757;
+}

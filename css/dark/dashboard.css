@@ -42,9 +42,6 @@ nav {
 }
 
 /* From Uiverse.io by deepak16375 */ 
-.searchBar button {
-  background-color: #0e0e0e;
-}
 
 .userFeed hr {
   background-color: rgba(255, 255, 255, 0.05); 
@@ -67,11 +64,27 @@ nav {
 }
 
 .feedDiv button {
-  background-color: #1d1d1d; 
+  background-color: #3f3f3f; 
+  color: rgb(192, 192, 192);
 }
 
 .feedPicture {
   border: 2px solid rgb(255, 255, 255);
+}
+
+.searchBar input,
+.navSearchBar input {
+  color: rgb(192, 192, 192) !important;
+  background-color: rgb(24, 24, 24);
+}
+
+.searchBar input::placeholder{
+  color: rgb(192, 192, 192) !important;
+  background-color: rgb(24, 24, 24);
+}
+
+.searchBar button, .navSearchBar button {
+  background-color: #575757;
 }
 
 @media screen and (max-width: 1160px) {

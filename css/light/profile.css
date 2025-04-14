@@ -42,7 +42,6 @@ nav {
   color: black;
   background-color: #E2E2E2;
 }
-
 .post {
   background-color: rgb(211, 211, 211);
 }
@@ -65,4 +64,12 @@ nav {
   #navSpan {
       color: black;
   }
+}
+
+#SearchDiv.active input {
+background-color: #f0f0f0;
+}
+
+#SearchDiv button {
+  background-color: rgb(226, 226, 226);
 }
