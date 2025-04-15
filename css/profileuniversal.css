@@ -365,7 +365,6 @@ a {
     display: flex; 
     flex-wrap: wrap; 
     flex-direction: column;
-    gap: 10px;
 }
 
 .recommendedUser {
@@ -537,11 +536,6 @@ font-size: 15px;
     border-radius: 50px; 
     margin-bottom: 20px; 
     padding: 5px;
-}
-
-.toDoList {
-    display: flex; 
-    justify-content: center;
 }
 
 .user button {
@@ -812,7 +806,7 @@ font-size: 15px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 0px;
     }
   
     .userFeed {
@@ -891,6 +885,20 @@ font-size: 15px;
       justify-content: center;
     }
 
+    .mobileFeed {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .mobileFeed .feedDiv {
+        margin-top: 10px;
+        width: 90%;
+        max-width: 367px;
+    }
+
   }
   
   @media screen and (max-width: 1160px) {
@@ -929,6 +937,9 @@ font-size: 15px;
     }
     #navSpan {
         display: block;
+    }
+    .mobileFeed {
+        display: none;
     }
   }
   

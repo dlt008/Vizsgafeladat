@@ -16,7 +16,7 @@
         <div class="nav-icons">
             <a href="dashboard.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Home"><img src="imgs/black/home.svg" alt="Home icon" class="theme-icon"></span></a>
             <a href="feed.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="imgs/black/feed.svg" alt="Person icon" class="theme-icon"></span></a>
-            <h1 id="navSpan">EchoMap</h1>
+            <a href="profile.html" class="link-size"><span class="material-symbols-outlined" data-tooltip="Profile"><img src="imgs/black/person.svg" alt="Person icon" class="theme-icon"></span></a>
             <a class="link-size searchIcon"><span class="material-symbols-outlined" data-tooltip="Search" onclick="searchOpenBttn()"><img src="imgs/black/search.svg" alt="Search icon" class="theme-icon"></span></a>
             <span class="material-symbols-outlined" data-tooltip="Dark Mode" onclick="toggleTheme()">
                 <img src="imgs/black/theme.svg" alt="Theme Toggle" class="theme-icon">
@@ -63,7 +63,6 @@
                 <span class="header">Top Users</span>
 
                 <div class="feedDiv" id="recommendations">
-
                     <div class="user">
                         <div class="feedPicture"></div>
                         <div class="feedName">
@@ -123,14 +122,30 @@
 
                 <hr id="smallScreenHr">
 
-                <div class="smalltoDoList">
-                    <ul">
+                <div class="mobileFeed">
+                    <ul>
                         <li>Follow someone</li>
                         <li>Post your first idea</li>
                         <li>Like an idea</li>
                         <li>Comment on an idea</li>
                         <li style="text-decoration: line-through;">Set a banner</li>
                     </ul>
+                    <div class="feedDiv" id="recommendations">
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
+                                <p>@Username</p>
+                            </div>
+                            <button>Follow</button>
+                        </div>
+                        <div class="user">
+                            <div class="feedPicture"></div>
+                            <div class="feedName">
+                                <p>@Username</p>
+                            </div>
+                            <button>Follow</button>
+                        </div>
+                    </div>
                 </div>
 
                 <hr id="smallScreenHr">

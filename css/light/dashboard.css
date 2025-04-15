@@ -20,6 +20,10 @@ nav {
   background-color: #f0f0f0;
 }
 
+.mobileFeed {
+  background-color: rgb(226, 226, 226);
+}
+
 .nav-icons .material-symbols-outlined:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }

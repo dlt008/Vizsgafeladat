@@ -414,14 +414,8 @@ nav .nav-icons {
     font-size: 22px;
 }
 
-.toDoList {
-    display: flex; 
-    justify-content: center;
-}
-
 .feedDiv {
     display: flex; 
-    align-items: center; 
     padding: 10px; 
     border-radius: 5px; 
     display: flex; 
@@ -815,10 +809,10 @@ a {
     }
   
     nav .nav-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
     }
   
     .userFeed {
@@ -901,6 +895,31 @@ a {
         background-color: transparent;
         padding: 0;
     }
+
+    .mobileFeed {
+        display: flex !important; 
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+            margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .mobileFeed .user {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    
+    .mobileFeed .feedDiv {
+        margin-top: 10px;
+        width: 90%;
+        max-width: 367px;
+    }
+
   }
   
   @media screen and (max-width: 1160px) {
@@ -933,5 +952,8 @@ a {
     }
     #navSpan {
         display: block;
+    }
+    .mobileFeed {
+        display: none;
     }
   }
