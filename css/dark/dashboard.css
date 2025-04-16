@@ -83,6 +83,10 @@ nav {
   background-color: rgb(24, 24, 24);
 }
 
+.mobileFeed .navSearchBar ::placeholder {
+  color: rgb(192, 192, 192);
+}
+
 .searchBar button, .navSearchBar button {
   background-color: #575757;
 }

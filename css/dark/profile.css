@@ -22,6 +22,10 @@ nav {
   background-color: #191919;
 }
 
+.feedDiv button {
+  background-color: #3f3f3f;
+}
+
 .userFeed {
   border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -40,7 +44,6 @@ nav {
 
 .user button {
   color: rgb(192, 192, 192);
-  background-color: #1d1d1d;
 }
 
 .post {
